@@ -8,6 +8,7 @@
   <title>Gustavo Mendonça — Além do comum.</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="motion.css" />
   <script src="app.js" defer></script>
 </head>
 <body>
@@ -15,7 +16,7 @@
   <header class="site-header">
     <a class="logo" href="#inicio" aria-label="Gustavo Mendonça, início">g<span>m</span><i>.</i></a>
     <nav aria-label="Navegação principal"><a href="#projetos">Projetos</a><a href="#sobre">Sobre</a><a href="#tecnologias">Tecnologias</a></nav>
-    <a class="header-contact" href="#contato">Vamos conversar <span>↗</span></a>
+    <div class="header-controls"><button id="theme-toggle" class="theme-toggle" aria-label="Ativar tema claro" aria-pressed="false">☼</button><a class="header-contact" href="#contato">Vamos conversar <span>↗</span></a></div>
   </header>
   <main id="conteudo">
     <section class="hero" id="inicio" aria-labelledby="hero-title">
@@ -25,12 +26,22 @@
         <div class="energy-scene" aria-hidden="true"><div class="scene-grid"></div><div class="orbit orbit-outer"></div><div class="orbit orbit-inner"></div><div class="orbit orbit-tilted"></div><div class="energy-core"><div class="core-center"></div></div><svg class="infinity" viewBox="0 0 320 150" fill="none"><path d="M160 75C107-9 23 12 23 75s84 84 137 0 137-63 137 0-84 84-137 0Z" /></svg><span class="orb-spark spark-one"></span><span class="orb-spark spark-two"></span><span class="orb-spark spark-three"></span><span class="scene-mark scene-mark-top">術式 / 無限</span><span class="scene-mark scene-mark-bottom">IMAGINAR. CONSTRUIR. EVOLUIR.</span><span class="scene-index">[ ∞ ]</span><span class="scene-side">CREATIVE ENERGY · 100%</span></div>
       </div>
       <div class="hero-bottom"><a href="#projetos" class="scroll-cue"><span>↓</span> ROLE PARA EXPLORAR</a><div class="hero-social"><a href="https://github.com/gohenj" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/gustavo-mendon%C3%A7a-795395209/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div>
-      <div class="hero-name" aria-hidden="true">GUSTAVO<span> MENDONÇA</span></div>
+      <div class="hero-name" aria-hidden="true"><div class="name-track"><span>GUSTAVO MENDONÇA ✧&nbsp;</span><span>GUSTAVO MENDONÇA ✧&nbsp;</span></div></div>
     </section>
     <div class="ticker" aria-hidden="true"><span>REACT</span><i>✧</i><span>TYPESCRIPT</span><i>✧</i><span>INTERFACES COM PROPÓSITO</span><i>✧</i><span>CÓDIGO EM EVOLUÇÃO</span><i>✧</i><span>REACT</span><i>✧</i><span>TYPESCRIPT</span></div>
     <section class="section projects" id="projetos" aria-labelledby="projects-title">
       <div class="section-intro"><p class="eyebrow">01 / PROJETOS SELECIONADOS</p><div class="section-title-row"><h2 id="projects-title">Do conceito<br />ao <em>código.</em></h2><p>Experimentos que viraram experiências.<br />Cada projeto, um próximo nível.</p></div></div>
-      <div class="project-filters" role="group" aria-label="Filtrar projetos"><button class="active" data-filter="all" aria-pressed="true">Todos <span>03</span></button><button data-filter="frontend" aria-pressed="false">Frontend</button><button data-filter="fullstack" aria-pressed="false">Full stack</button></div>
+      <div class="work-gallery" aria-label="Galeria de projetos em perspectiva" aria-roledescription="carrossel">
+        <div class="gallery-heading"><span class="eyebrow">WORK GALLERY / EXPLORE EM MOVIMENTO</span><button id="gallery-autoplay" class="text-button" aria-pressed="true">Pausar rotação Ⅱ</button></div>
+        <div class="gallery-stage">
+          <button class="gallery-slide gallery-arena" data-slide="0" aria-label="Selecionar Arena Pulse" aria-pressed="true"><span class="gallery-window">ARENA PULSE / 01</span><img src="assets/arena-pulse.png" alt="Prévia do dashboard Arena Pulse" /><span class="gallery-caption">ARENA PULSE</span></button>
+          <button class="gallery-slide gallery-nexus" data-slide="1" aria-label="Selecionar Nexus Cripto" aria-pressed="false"><span class="gallery-window">NEXUS CRIPTO / 02</span><span class="gallery-visual">nexus<span>↗</span><small>CRYPTO. CONNECTED.</small></span><span class="gallery-caption">NEXUS CRIPTO</span></button>
+          <button class="gallery-slide gallery-tasks" data-slide="2" aria-label="Selecionar Lista de tarefas" aria-pressed="false"><span class="gallery-window">ECOSSISTEMA DE TAREFAS / 03</span><span class="gallery-visual"><span class="gallery-code">&lt;/&gt;</span><small>JAVA · SPRING · ANGULAR</small></span><span class="gallery-caption">LISTA DE TAREFAS</span></button>
+        </div>
+        <div class="gallery-navigation"><button id="gallery-prev" class="gallery-arrow" aria-label="Projeto anterior">←</button><div class="gallery-dots" role="group" aria-label="Escolher projeto"><button data-gallery-dot="0" class="active" aria-label="Mostrar Arena Pulse" aria-pressed="true"></button><button data-gallery-dot="1" aria-label="Mostrar Nexus Cripto" aria-pressed="false"></button><button data-gallery-dot="2" aria-label="Mostrar Lista de tarefas" aria-pressed="false"></button></div><button id="gallery-next" class="gallery-arrow" aria-label="Próximo projeto">→</button></div>
+        <div class="gallery-description"><p class="gallery-index" id="gallery-index">01 / 03</p><h3 id="gallery-title">Arena Pulse</h3><p id="gallery-summary">Dashboard de esports com React, TypeScript e Tailwind CSS.</p><a id="gallery-link" href="projects/arena/" target="_blank" rel="noopener noreferrer">Explorar projeto ↗</a></div><p class="sr-only" id="gallery-status" role="status"></p>
+      </div>
+      <div class="project-filters" role="group" aria-label="Filtrar lista de projetos"><button class="active" data-filter="all" aria-pressed="true">Todos <span>03</span></button><button data-filter="frontend" aria-pressed="false">Frontend</button><button data-filter="fullstack" aria-pressed="false">Full stack</button></div>
       <p class="sr-only" id="project-status" role="status">3 projetos exibidos.</p>
       <article class="project featured-project" data-category="frontend">
         <a class="project-image arena-image" href="projects/arena/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demonstração do Arena Pulse"><div class="image-toolbar"><span><i></i><i></i><i></i></span><small>ARENA PULSE / LIVE PREVIEW</small><span>↗</span></div><img src="assets/arena-pulse.png" width="1440" height="1433" alt="Dashboard Arena Pulse com partidas de esports, filtros por jogo e cards de estatísticas." loading="lazy" /><span class="image-open">Explorar a arena ↗</span></a>

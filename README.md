@@ -23,6 +23,17 @@ As artes do Nexus e de tarefas são composições ilustrativas, não capturas da
 
 O botão de domínio intensifica a composição de energia. As animações respeitam `prefers-reduced-motion`. As fontes externas têm alternativas locais caso o Google Fonts esteja indisponível.
 
+## Animações da referência
+
+- Nome em movimento contínuo, entrada da abertura e objeto 3D de tecnologias.
+- Galeria de projetos em perspectiva, com seleção, setas, indicadores e rotação automática a cada 4,5 segundos. Pausa com foco, ponteiro sobre a galeria, aba oculta ou controle de pausa.
+- Digitação dos títulos na primeira entrada da seção e revelação dos cards ao rolar.
+- Temas claro/escuro com expansão circular nos navegadores com View Transitions; troca direta nos demais.
+- Onda de energia ao expandir o domínio.
+- Controle global de pausa no rodapé e respeito à preferência de movimento reduzido do sistema.
+
+As animações adaptam a referência à identidade roxa. A abertura usa energia e tipografia, pois nenhuma foto pessoal foi fornecida.
+
 ## Atualizar o Arena Pulse
 
 Depois de `npm run build` na pasta do Arena Pulse, copie o conteúdo de `dist` para `dist/projects/arena` neste portfólio. Seu Vite precisa usar `base: './'` para funcionar nessa subpasta.
