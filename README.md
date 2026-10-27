@@ -25,7 +25,7 @@ As animações respeitam `prefers-reduced-motion`. As fontes externas têm alter
 
 ## Animações da referência
 
-- Nome em movimento contínuo, entrada da abertura e objeto 3D de tecnologias.
+- Nome fixo na abertura, entrada suave e objeto 3D de tecnologias nas seções seguintes.
 - Galeria de projetos em perspectiva, com seleção, setas, indicadores e rotação automática a cada 4,5 segundos. Pausa com foco, ponteiro sobre a galeria, aba oculta ou controle de pausa.
 - Digitação dos títulos na primeira entrada da seção e revelação dos cards ao rolar.
 - Temas claro/escuro com expansão circular nos navegadores com View Transitions; troca direta nos demais.
@@ -35,12 +35,13 @@ As animações adaptam a referência à identidade roxa. A abertura usa o vídeo
 
 ## Vídeo de fundo
 
-A expansão de domínio foi removida, incluindo Canvas, partículas e seus eventos. A abertura agora usa um trecho de 5,8 segundos do vídeo enviado, comprimido em H.264, sem áudio e em loop (aproximadamente 546 KiB). A rolagem do nome aparece à frente do vídeo e uma camada escura protege a legibilidade dos textos.
+A expansão de domínio foi removida, incluindo Canvas, partículas e seus eventos. A abertura usa a nova referência limpa (35,47 segundos, 1008 × 576), com a trilha de vídeo H.264 copiada sem recompressão e apenas o áudio removido. O arquivo tem aproximadamente 3,94 MB. O nome aparece inteiro e fixo, com uma apresentação direta; o vídeo tem mais destaque no lado direito.
 
-O vídeo só recebe sua URL quando puder reproduzir. Em telas de até 700 px, com economia de dados ou movimento reduzido, começa com uma imagem estática de aproximadamente 22 KB. Em celular, a reprodução pode ser solicitada pelo botão. Com movimento reduzido, a imagem permanece estática. A reprodução pausa ao sair da abertura, ocultar a aba, usar o controle do vídeo ou pausar as animações no rodapé. O vídeo fica restrito à abertura; as demais seções mantêm seu visual.
+O vídeo só recebe sua URL quando puder reproduzir. Em telas de até 700 px, com economia de dados ou movimento reduzido, começa com uma imagem estática de aproximadamente 46 KB. Em celular, a reprodução pode ser solicitada pelo botão. Com movimento reduzido, a imagem permanece estática. A reprodução pausa ao sair da abertura, ocultar a aba, usar o controle do vídeo ou pausar as animações no rodapé. O vídeo fica restrito à abertura; as demais seções mantêm seu visual.
 
-Edite `dist/hero-video.css` para o enquadramento e contraste, e `dist/hero-video.js` para as regras de reprodução. Os assets ficam em `dist/assets/jujutsu-hero.mp4` e `dist/assets/jujutsu-poster.jpg`.
+Edite `dist/hero-video.css` para o enquadramento e contraste, e `dist/hero-video.js` para as regras de reprodução. Os assets ficam em `dist/assets/jujutsu-clean.mp4` e `dist/assets/jujutsu-clean-poster.jpg`.
 
 ## Atualizar o Arena Pulse
 
 Depois de `npm run build` na pasta do Arena Pulse, copie o conteúdo de `dist` para `dist/projects/arena` neste portfólio. Seu Vite precisa usar `base: './'` para funcionar nessa subpasta.
+
