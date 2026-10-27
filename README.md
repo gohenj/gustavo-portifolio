@@ -34,6 +34,12 @@ O botão de domínio intensifica a composição de energia. As animações respe
 
 As animações adaptam a referência à identidade roxa. A abertura usa energia e tipografia, pois nenhuma foto pessoal foi fornecida.
 
+## Expansão de domínio
+
+O botão abre uma vinheta de 2,2 segundos e transforma o fundo de toda a página num ambiente cósmico roxo, com eclipse, nebulosas, plano em perspectiva e partículas com profundidade. A página continua navegável. Use o botão fixo “Sair do domínio”, Escape ou o botão original para sair. O tema anterior é preservado.
+
+As partículas são desenhadas em Canvas, limitadas a 85 em telas pequenas e 150 nas maiores, em aproximadamente 30 quadros por segundo. A renderização para ao sair, ocultar a aba ou pausar o movimento. A preferência de movimento reduzido elimina a vinheta e mantém o ambiente estático. “Pausar partículas” controla também o movimento decorativo do ambiente; a pausa global continua disponível no rodapé.
+
 ## Atualizar o Arena Pulse
 
 Depois de `npm run build` na pasta do Arena Pulse, copie o conteúdo de `dist` para `dist/projects/arena` neste portfólio. Seu Vite precisa usar `base: './'` para funcionar nessa subpasta.

@@ -1,10 +1,4 @@
 const toggle = document.querySelector('#domain-toggle');
-toggle.addEventListener('click', () => {
-  const expanded = document.body.classList.toggle('domain-active');
-  toggle.setAttribute('aria-pressed', String(expanded));
-  toggle.innerHTML = `<span class="domain-symbol">✧</span> ${expanded ? 'Recolher domínio' : 'Expandir domínio'}`;
-  document.querySelector('#domain-status').textContent = expanded ? 'Domínio expandido. Energia roxa intensificada.' : 'Domínio recolhido. Visual original restaurado.';
-});
 
 const filters = document.querySelectorAll('[data-filter]');
 filters.forEach(button => button.addEventListener('click', () => {
@@ -202,11 +196,3 @@ skillObject.setAttribute('aria-hidden', 'true');
 skillObject.innerHTML = '<div class="skill-cube"><span>REACT</span><span>TYPESCRIPT</span><span>CRIAR</span><span>EVOLUIR</span><span>✧</span><span>GUSTAVO</span></div>';
 document.querySelector('.about-title').append(skillObject);
 
-toggle.addEventListener('click', () => {
-  if (!motionEnabled) return;
-  const wave = document.createElement('div');
-  wave.className = 'domain-wave';
-  wave.setAttribute('aria-hidden', 'true');
-  document.querySelector('.hero').append(wave);
-  wave.addEventListener('animationend', () => wave.remove(), { once: true });
-});
