@@ -16,12 +16,12 @@ Acesse `http://127.0.0.1:5174`. Encerre com Ctrl+C. O Arena Pulse continua sendo
 
 - `dist/index.html`: textos, tecnologias, links e projetos.
 - `dist/styles.css`: identidade visual, responsividade e animações.
-- `dist/app.js`: expansão de domínio, filtros e detalhes dos projetos.
+- `dist/app.js`: galeria, filtros, temas e detalhes dos projetos.
 - `dist/assets/arena-pulse.png`: captura real da interface do Arena Pulse.
 
 As artes do Nexus e de tarefas são composições ilustrativas, não capturas das aplicações. As tecnologias e descrições são baseadas nos repositórios públicos fornecidos. Não há formulário enviando mensagens: os contatos abrem GitHub e LinkedIn.
 
-O botão de domínio intensifica a composição de energia. As animações respeitam `prefers-reduced-motion`. As fontes externas têm alternativas locais caso o Google Fonts esteja indisponível.
+As animações respeitam `prefers-reduced-motion`. As fontes externas têm alternativas locais caso o Google Fonts esteja indisponível.
 
 ## Animações da referência
 
@@ -29,16 +29,17 @@ O botão de domínio intensifica a composição de energia. As animações respe
 - Galeria de projetos em perspectiva, com seleção, setas, indicadores e rotação automática a cada 4,5 segundos. Pausa com foco, ponteiro sobre a galeria, aba oculta ou controle de pausa.
 - Digitação dos títulos na primeira entrada da seção e revelação dos cards ao rolar.
 - Temas claro/escuro com expansão circular nos navegadores com View Transitions; troca direta nos demais.
-- Onda de energia ao expandir o domínio.
 - Controle global de pausa no rodapé e respeito à preferência de movimento reduzido do sistema.
 
-As animações adaptam a referência à identidade roxa. A abertura usa energia e tipografia, pois nenhuma foto pessoal foi fornecida.
+As animações adaptam a referência à identidade roxa. A abertura usa o vídeo de referência fornecido e tipografia, pois nenhuma foto pessoal foi fornecida.
 
-## Expansão de domínio
+## Vídeo de fundo
 
-O botão abre uma vinheta de 2,2 segundos e transforma o fundo de toda a página num ambiente cósmico roxo, com eclipse, nebulosas, plano em perspectiva e partículas com profundidade. A página continua navegável. Use o botão fixo “Sair do domínio”, Escape ou o botão original para sair. O tema anterior é preservado.
+A expansão de domínio foi removida, incluindo Canvas, partículas e seus eventos. A abertura agora usa um trecho de 5,8 segundos do vídeo enviado, comprimido em H.264, sem áudio e em loop (aproximadamente 546 KiB). A rolagem do nome aparece à frente do vídeo e uma camada escura protege a legibilidade dos textos.
 
-As partículas são desenhadas em Canvas, limitadas a 85 em telas pequenas e 150 nas maiores, em aproximadamente 30 quadros por segundo. A renderização para ao sair, ocultar a aba ou pausar o movimento. A preferência de movimento reduzido elimina a vinheta e mantém o ambiente estático. “Pausar partículas” controla também o movimento decorativo do ambiente; a pausa global continua disponível no rodapé.
+O vídeo só recebe sua URL quando puder reproduzir. Em telas de até 700 px, com economia de dados ou movimento reduzido, começa com uma imagem estática de aproximadamente 22 KB. Em celular, a reprodução pode ser solicitada pelo botão. Com movimento reduzido, a imagem permanece estática. A reprodução pausa ao sair da abertura, ocultar a aba, usar o controle do vídeo ou pausar as animações no rodapé. O vídeo fica restrito à abertura; as demais seções mantêm seu visual.
+
+Edite `dist/hero-video.css` para o enquadramento e contraste, e `dist/hero-video.js` para as regras de reprodução. Os assets ficam em `dist/assets/jujutsu-hero.mp4` e `dist/assets/jujutsu-poster.jpg`.
 
 ## Atualizar o Arena Pulse
 

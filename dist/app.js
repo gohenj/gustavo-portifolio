@@ -1,5 +1,3 @@
-const toggle = document.querySelector('#domain-toggle');
-
 const filters = document.querySelectorAll('[data-filter]');
 filters.forEach(button => button.addEventListener('click', () => {
   filters.forEach(filter => {
