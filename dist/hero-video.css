@@ -22,4 +22,5 @@
 /* Keep the film near its native dimensions instead of enlarging it to fill the hero. */
 @media(min-width:701px){.hero-film-poster,.hero-film-video{width:min(78%,1100px);object-fit:contain;object-position:right center;mask-image:linear-gradient(transparent,black 12%,black 85%,transparent)}.hero-film-shade{background:linear-gradient(90deg,#08090e 0,#08090ef5 22%,#08090ed9 35%,#08090e44 57%,transparent 82%),linear-gradient(0deg,#08090ef5 0,transparent 32%,transparent 83%,#08090e88)}}
 @media(max-width:700px){.hero-film-poster,.hero-film-video{object-fit:cover}}
-@media(min-width:701px){.hero-film-poster,.hero-film-video{top:50%;transform:translateY(-50%);height:auto;aspect-ratio:1008/576;object-fit:contain;mask-image:linear-gradient(90deg,transparent,#000 22%),linear-gradient(transparent,#000 14%,#000 80%,transparent);mask-composite:intersect}}
+@media(min-width:701px){.hero-film-poster,.hero-film-video{top:50%;transform:translateY(-50%);height:auto;aspect-ratio:1020/576;object-fit:contain;mask-image:linear-gradient(90deg,transparent,#000 22%),linear-gradient(transparent,#000 14%,#000 80%,transparent);mask-composite:intersect}}
+
