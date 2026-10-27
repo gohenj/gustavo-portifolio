@@ -46,3 +46,9 @@ Edite `dist/hero-video.css` para o enquadramento e contraste, e `dist/hero-video
 Depois de `npm run build` na pasta do Arena Pulse, copie o conteúdo de `dist` para `dist/projects/arena` neste portfólio. Seu Vite precisa usar `base: './'` para funcionar nessa subpasta.
 
 
+
+## Projetos atuais e cards de tecnologias
+
+A seleção principal passou a ser Barber Pro, Niver do Jão e Arena Pulse. As capturas são das interfaces publicadas; o convite teve o endereço do evento excluído por recorte. O formulário de presença e o agendamento não foram enviados durante a inspeção. A stack do Niver foi conferida no package.json público (React, JavaScript, Tailwind e Vite). O repositório informado do Barber Pro retornou 404 no acesso público, por isso sua stack interna e código não são anunciados sem confirmação.
+
+A seção de tecnologias tem 28 cards em quatro filtros: Frontend (10), Backend (7), Dados (5) e Ferramentas (6). As experiências anteriores continuam identificadas. Ícones locais do Devicon v2.16.0, com licença em dist/assets/tech/LICENSE.txt; os símbolos complementares são SVGs simples. O filtro é implementado em dist/tech-filter.js, com estilos em dist/projects-tech.css.

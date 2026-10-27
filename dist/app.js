@@ -10,7 +10,7 @@ filters.forEach(button => button.addEventListener('click', () => {
     project.hidden = button.dataset.filter !== 'all' && project.dataset.category !== button.dataset.filter;
     if (!project.hidden) count++;
   });
-  document.querySelector('.project-pair').hidden = count === 1 && button.dataset.filter === 'frontend';
+  document.querySelector('.project-pair').hidden = [...document.querySelector('.project-pair').children].every(project => project.hidden);
   document.querySelector('#project-status').textContent = `${count} ${count === 1 ? 'projeto exibido' : 'projetos exibidos'}.`;
 }));
 
@@ -19,9 +19,13 @@ const details = {
     title: 'Arena Pulse',
     html: '<p>Primeiro sprint de um dashboard de esports, construído com React, TypeScript, Vite e Tailwind CSS.</p><ul><li>Componentes reutilizáveis para navegação, estatísticas e partidas.</li><li>Busca e filtro por jogo, com estado vazio.</li><li>Favoritos persistidos no localStorage.</li><li>Layout responsivo e navegação por teclado.</li></ul><p>As partidas e os horários são demonstrativos. A integração com API e as atualizações em tempo real são próximos passos.</p>'
   },
-  tasks: {
-    title: 'Uma API, três camadas',
-    html: '<p>O projeto de tarefas conecta uma API central a dois tipos de cliente.</p><ul><li>Backend: Java, Spring Boot e Spring Data JPA.</li><li>Web: Angular, TypeScript, HTML e CSS.</li><li>Desktop: JavaFX.</li><li>Banco de dados: H2 em memória para desenvolvimento.</li></ul><p>A API expõe operações para criar, listar, atualizar e remover tarefas.</p>'
+  barber: {
+    title: 'Barber Pro',
+    html: '<p>Aplicação publicada para apresentar uma barbearia e organizar a escolha de serviços e horários.</p><ul><li>Seleção de serviço, profissional e data.</li><li>Entrada e criação de conta disponíveis na interface.</li><li>Catálogo de cortes e vitrine com disponibilidade de produtos.</li></ul><p>A experiência reúne a apresentação da barbearia e o início do agendamento em uma única aplicação.</p>'
+  },
+  birthday: {
+    title: 'Niver do Jão',
+    html: '<p>Convite digital com identidade visual inspirada no futebol brasileiro.</p><ul><li>Informações da comemoração e formulário de confirmação de presença.</li><li>Campo de nome e escolha entre comparecer ou não.</li><li>React, JavaScript, Tailwind CSS e Vite, conferidos no repositório público.</li></ul><p>O objetivo é concentrar o convite e a resposta do convidado em uma única experiência.</p>'
   }
 };
 const dialog = document.querySelector('#project-dialog');
@@ -112,9 +116,9 @@ const gallery = document.querySelector('.work-gallery');
 const slides = [...document.querySelectorAll('[data-slide]')];
 const dots = [...document.querySelectorAll('[data-gallery-dot]')];
 const galleryProjects = [
-  { title: 'Arena Pulse', summary: 'Dashboard de esports com React, TypeScript e Tailwind CSS.', href: 'projects/arena/' },
-  { title: 'Nexus Cripto', summary: 'Aplicação full stack com React, Node.js, Express e MongoDB.', href: 'https://github.com/gohenj/nexus-frontend' },
-  { title: 'Lista de tarefas', summary: 'Java e Spring Boot conectando clientes Angular e JavaFX.', href: 'https://github.com/gohenj/ApiSpringBoot' }
+  { title: 'Barber Pro', summary: 'Agendamento para barbearia, escolha de serviços e vitrine de produtos.', href: 'https://barber-pro-teste.onrender.com' },
+  { title: 'Niver do Jão', summary: 'Convite digital com formulário de presença, React e identidade de futebol brasileiro.', href: 'https://niver-do-jao.vercel.app' },
+  { title: 'Arena Pulse', summary: 'Dashboard de esports com React, TypeScript e Tailwind CSS.', href: 'projects/arena/' }
 ];
 let activeSlide = 0;
 let galleryAutoplay = true;
@@ -193,4 +197,5 @@ skillObject.className = 'skill-object';
 skillObject.setAttribute('aria-hidden', 'true');
 skillObject.innerHTML = '<div class="skill-cube"><span>REACT</span><span>TYPESCRIPT</span><span>CRIAR</span><span>EVOLUIR</span><span>✧</span><span>GUSTAVO</span></div>';
 document.querySelector('.about-title').append(skillObject);
+
 
