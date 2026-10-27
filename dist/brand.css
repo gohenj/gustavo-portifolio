@@ -1,0 +1,8 @@
+/* 悟, outlined from Yuji Boku: self-contained SVG, no Japanese font download. */
+.logo.kanji-logo{display:inline-flex;align-items:center;justify-content:center;width:45px;height:45px;flex-shrink:0;line-height:1;letter-spacing:normal;color:#f3ecfa;border-radius:5px;transition:color .2s}
+.kanji-logo svg{display:block;width:45px;height:45px;overflow:visible}
+.kanji-logo:hover{color:#d9c2f7}
+.light-theme .logo.kanji-logo{color:#382541}
+.footer .kanji-logo,.footer .kanji-logo svg{width:42px;height:42px}
+@media(max-width:700px){.site-header .kanji-logo,.site-header .kanji-logo svg{width:37px;height:40px}}
+@media(prefers-reduced-motion:reduce){.logo.kanji-logo{transition:none}}

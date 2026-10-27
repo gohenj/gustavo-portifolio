@@ -1,5 +1,7 @@
 # Gustavo Mendonça — Portfólio
 
+Marca: kanji 悟 (Satoru), com traços da fonte caligráfica Yuji Boku e detalhe roxo. O desenho é SVG convertido em curvas, sem carregar a fonte japonesa no navegador. Usado no cabeçalho, rodapé e favicon. Crédito da fonte: Yuji Boku, SIL Open Font License, incluída em `dist/assets/YujiBoku-OFL.txt`.
+
 Portfólio pessoal com visual escuro e energia roxa inspirada em Jujutsu Kaisen. HTML, CSS e JavaScript, sem instalação de dependências ou build.
 
 ## Abrir localmente
