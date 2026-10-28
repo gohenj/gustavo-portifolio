@@ -54,3 +54,9 @@ Depois de `npm run build` na pasta do Arena Pulse, copie o conteúdo de `dist` p
 A seleção principal passou a ser Barber Pro, Niver do Jão e Arena Pulse. As capturas são das interfaces publicadas; o convite teve o endereço do evento excluído por recorte. O formulário de presença e o agendamento não foram enviados durante a inspeção. A stack do Niver foi conferida no package.json público (React, JavaScript, Tailwind e Vite). O repositório informado do Barber Pro retornou 404 no acesso público, por isso sua stack interna e código não são anunciados sem confirmação.
 
 A seção de tecnologias tem 28 cards em quatro filtros: Frontend (10), Backend (7), Dados (5) e Ferramentas (6). As experiências anteriores continuam identificadas. Ícones locais do Devicon v2.16.0, com licença em dist/assets/tech/LICENSE.txt; os símbolos complementares são SVGs simples. O filtro é implementado em dist/tech-filter.js, com estilos em dist/projects-tech.css.
+
+## Fichas técnicas dos projetos
+
+Os textos e as stacks ficam em `dist/project-data.js`, separados da apresentação. `dist/project-details.js` monta a janela e suas três abas (Visão geral, Tecnologias, Como funciona); `dist/project-details.css` define o layout responsivo. As abas aceitam setas, Home e End, a janela fecha com Escape e devolve o foco ao botão de origem.
+
+A stack do Barber Pro foi confirmada no código local fornecido: Python, Flask, frontend HTML/CSS/JavaScript e SQLite com Flask-SQLAlchemy. Integrações opcionais e recursos dependentes de configuração são identificados como tais. A ficha do convite foi conferida no código público; não foram enviados formulários ou notificações durante a revisão.

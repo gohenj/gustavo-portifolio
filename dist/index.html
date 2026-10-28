@@ -1,71 +1,1159 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#08090e" />
-  <meta name="description" content="Gustavo Mendonça — desenvolvedor com foco em frontend. Conheça Barber Pro, Niver do Jão e Arena Pulse: projetos web, interfaces e aplicações com React e TypeScript." />
-  <title>Gustavo Mendonça — Desenvolvedor Frontend</title>
-  <link rel="icon" href="assets/favicon-satoru.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="motion.css" />
-  <link rel="stylesheet" href="hero-video.css" />
-  <link rel="stylesheet" href="projects-tech.css" />
-  <link rel="stylesheet" href="brand.css" />
-  <script src="app.js" defer></script>
-  <script src="hero-video.js" defer></script>
-  <script src="tech-filter.js" defer></script>
-</head>
-<body>
-  <a href="#conteudo" class="skip">Pular para o conteúdo</a>
-  <header class="site-header">
-    <a class="logo kanji-logo" href="#inicio" aria-label="Gustavo Mendonça, início"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" aria-hidden="true"><path fill="currentColor" d="M67.5 38.07Q66.77 39.11 65.56 39.01Q64.34 38.92 62.94 38.62Q62.4 38.5 61.79 38.38Q61.18 38.25 60.57 38.19Q58.69 38.01 56.53 38.04Q54.38 38.07 52.43 38.25Q50.73 38.38 48.97 38.44Q47.21 38.5 45.44 38.5Q41.25 38.56 37.33 38.89Q33.41 39.23 30.5 40.99Q28.0 41.23 26.27 39.87Q24.54 38.5 23.27 36.98Q23.57 36.31 23.93 36.31Q24.3 36.31 24.54 35.89Q26.12 36.37 27.82 36.22Q29.52 36.07 31.23 35.82Q32.2 35.64 33.14 35.52Q34.08 35.4 34.99 35.4Q35.17 35.22 35.3 34.97Q35.42 34.73 35.54 34.49Q35.78 33.94 36.15 33.52Q36.51 33.09 37.3 33.15Q37.24 32.73 37.03 32.48Q36.82 32.24 36.51 32.0Q37.18 30.6 37.45 29.44Q37.73 28.29 38.27 26.77Q36.88 27.01 36.18 27.35Q35.48 27.68 34.45 28.29Q32.5 27.62 31.01 26.77Q29.52 25.92 29.34 23.85Q30.86 24.04 32.35 24.01Q33.84 23.98 35.17 23.85Q36.21 23.79 37.21 23.76Q38.21 23.73 39.12 23.79Q39.25 23.31 39.43 22.76Q39.61 22.21 39.85 21.61Q40.28 20.33 40.64 19.08Q41.01 17.84 40.7 16.99Q40.46 16.32 40.1 16.26Q39.73 16.2 39.31 16.32Q39.0 16.38 38.7 16.38Q38.39 16.38 38.03 16.26Q37.73 16.2 37.61 16.35Q37.48 16.5 37.36 16.68Q37.24 17.17 36.94 17.17Q34.75 16.87 33.26 15.86Q31.77 14.86 30.56 13.59Q30.92 12.92 31.68 12.8Q32.44 12.67 33.23 12.98Q33.9 12.43 34.84 12.37Q35.78 12.31 36.82 12.37Q37.3 12.37 37.76 12.37Q38.21 12.37 38.7 12.37Q39.43 12.31 40.25 12.22Q41.07 12.13 41.86 12.07Q43.44 11.88 44.93 11.76Q46.42 11.64 47.45 11.88Q49.58 11.09 52.07 10.88Q54.56 10.67 56.75 11.28Q58.93 11.88 60.15 13.71Q58.45 14.98 55.74 15.29Q53.04 15.59 50.24 15.65Q48.6 15.71 47.08 15.8Q45.56 15.89 44.29 16.14Q44.41 16.32 44.53 16.53Q44.65 16.75 44.77 16.93Q45.14 17.54 45.44 18.2Q45.75 18.87 45.69 19.84Q45.02 20.33 44.59 21.15Q44.17 21.97 43.92 23.0Q45.5 23.0 47.81 22.76Q50.12 22.52 51.88 22.21Q52.73 22.76 53.98 23.34Q55.23 23.92 56.26 24.83Q57.29 25.74 57.41 27.38Q56.87 27.86 56.23 27.9Q55.59 27.93 54.92 28.47Q54.74 29.87 54.35 31.48Q53.95 33.09 53.77 33.94Q55.04 34.73 56.29 34.61Q57.54 34.49 58.63 34.18Q59.3 34.0 59.9 33.88Q60.51 33.76 61.06 33.82Q61.91 33.88 62.85 34.46Q63.79 35.03 64.58 35.52Q65.31 35.95 66.32 36.46Q67.32 36.98 67.5 38.07ZM60.94 44.51Q60.51 45.06 59.9 45.27Q59.3 45.49 58.75 45.7Q58.2 45.91 57.78 46.52Q56.93 47.79 56.71 49.71Q56.5 51.62 56.29 53.54Q56.08 55.45 55.1 56.73Q55.1 57.15 55.32 57.43Q55.53 57.7 55.77 57.94Q56.02 58.25 56.17 58.49Q56.32 58.73 56.14 59.04Q53.71 59.34 50.91 59.49Q48.12 59.64 45.38 59.64Q42.65 59.64 40.34 59.64Q39.85 59.64 39.43 59.64Q39.0 59.64 38.58 59.64Q37.79 60.92 37.06 61.01Q36.33 61.1 35.6 60.55Q34.87 60.01 34.23 59.1Q33.59 58.18 32.99 57.46Q32.99 57.21 33.05 56.79Q33.23 54.84 33.32 53.38Q33.41 51.93 33.35 50.59Q33.29 49.25 32.93 47.61Q32.32 46.7 31.32 46.18Q30.31 45.67 29.83 44.63Q29.83 44.39 29.89 44.24Q29.95 44.09 30.07 44.03Q30.19 43.91 30.28 43.75Q30.37 43.6 30.31 43.24Q30.5 43.18 31.16 43.18Q31.83 43.18 32.62 43.12Q33.41 43.06 33.84 42.63Q35.17 42.45 36.75 42.39Q38.33 42.33 39.97 42.33Q43.26 42.33 46.48 42.05Q49.7 41.78 51.82 40.5Q54.68 41.05 56.96 41.81Q59.24 42.57 60.94 44.51ZM29.4 33.21Q27.76 33.88 26.27 32.85Q24.78 31.81 23.9 29.84Q23.02 27.86 23.27 25.8Q23.08 25.43 22.99 24.95Q22.9 24.46 22.41 24.4Q22.72 27.56 22.48 30.81Q22.23 34.06 21.62 36.74Q21.99 38.86 22.14 42.17Q22.29 45.49 22.26 49.25Q22.23 53.02 22.08 56.57Q21.93 60.13 21.62 62.74Q20.35 62.68 19.22 61.74Q18.1 60.8 17.49 59.31Q16.89 57.82 17.13 56.24Q17.86 56.48 17.95 56.03Q18.04 55.57 17.98 54.9Q17.98 54.6 17.98 54.48Q17.92 53.81 18.04 53.26Q18.16 52.72 18.83 52.66Q18.83 52.17 18.43 52.17Q18.04 52.17 18.04 51.74Q18.28 48.89 18.31 45.15Q18.34 41.41 18.46 36.86Q18.59 33.21 18.4 29.2Q18.22 25.19 17.98 21.42Q17.92 20.33 17.86 19.3Q17.8 18.26 17.74 17.23Q17.68 15.53 17.22 14.38Q16.76 13.22 16.19 12.25Q15.61 11.28 15.12 10.12Q16.34 9.15 17.4 9.27Q18.46 9.39 19.41 10.09Q20.35 10.79 21.26 11.58Q21.69 11.94 22.14 12.34Q22.6 12.73 23.02 12.98Q23.33 14.31 23.17 15.74Q23.02 17.17 22.78 18.57Q22.54 19.9 22.38 21.27Q22.23 22.64 22.41 23.98Q24.24 24.34 26.09 25.37Q27.94 26.41 29.01 28.32Q30.07 30.23 29.4 33.21ZM51.76 45.06Q48.06 45.06 44.23 45.36Q40.4 45.67 37.36 46.15Q37.36 46.34 37.36 46.55Q37.36 46.76 37.36 47.0Q37.36 49.56 37.42 52.2Q37.48 54.84 37.97 56.67Q38.82 56.54 39.91 56.51Q41.01 56.48 42.16 56.48Q44.23 56.42 46.32 56.33Q48.42 56.24 50.12 55.75Q51.22 53.45 51.31 50.74Q51.4 48.04 51.76 45.06ZM49.51 26.28Q48.36 26.04 46.87 26.16Q45.38 26.28 44.05 26.47Q43.74 26.53 43.44 26.56Q43.13 26.59 42.83 26.65Q41.92 28.72 40.92 30.72Q39.91 32.73 39.18 35.03Q40.34 34.85 41.95 34.79Q43.56 34.73 45.32 34.67Q47.08 34.61 48.54 34.49Q48.6 33.94 48.72 33.45Q48.85 32.97 48.91 32.48Q49.21 31.09 49.42 29.63Q49.64 28.17 49.51 26.28ZM13.42 25.37Q15.24 26.65 15.64 28.56Q16.03 30.48 15.55 32.6Q15.06 34.73 14.18 36.74Q13.3 38.74 12.57 40.2Q11.48 40.08 10.78 39.11Q10.08 38.13 9.56 36.8Q9.05 35.46 8.5 34.43Q10.44 32.54 11.45 29.99Q12.45 27.44 13.42 25.37Z"/><path fill="#b68af5" d="M43 70 70 62 65 68 45 73Z"/><path fill="#9470d7" d="m70 59 4-2-2 5Z"/></svg></a>
-    <nav aria-label="Navegação principal"><a href="#projetos">Projetos</a><a href="#sobre">Sobre</a><a href="#tecnologias">Tecnologias</a></nav>
-    <div class="header-controls"><button id="theme-toggle" class="theme-toggle" aria-label="Ativar tema claro" aria-pressed="false">☼</button><a class="header-contact" href="#contato">Vamos conversar <span>↗</span></a></div>
-  </header>
-  <main id="conteudo">
-    <section class="hero" id="inicio" aria-labelledby="hero-title">
-      <div class="hero-film" aria-hidden="true"><img class="hero-film-poster" src="assets/jujutsu-source-poster.jpg" alt="" width="1020" height="576" fetchpriority="high" /><video class="hero-film-video" muted loop playsinline preload="none" poster="assets/jujutsu-source-poster.jpg" data-video-src="assets/jujutsu-source.mp4" tabindex="-1" disablepictureinpicture></video><div class="hero-film-shade"></div></div>
-      <div class="hero-top"><p class="eyebrow"><span class="tiny-dot"></span> CÓDIGO, CURIOSIDADE E UM POUCO DE ANIME.</p><span class="edition">PORTFÓLIO / GUSTAVO MENDONÇA</span></div>
-      <div class="hero-grid">
-        <div class="hero-copy"><h1 id="hero-title">Gustavo<br /><em>Mendonça<span>.</span></em></h1><p class="hero-role">Desenvolvedor Frontend</p><p class="hero-description">Construo aplicações web com React e TypeScript. Gosto de transformar ideias em interfaces e aprender desenvolvendo projetos completos.</p><div class="hero-actions"><a class="button button-light" href="#projetos">Ver projetos <span>↗</span></a><a class="hero-github" href="https://github.com/gohenj" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a></div><p id="film-status" class="sr-only" role="status"></p></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#08090e" />
+    <meta
+      name="description"
+      content="Gustavo Mendonça — desenvolvedor com foco em frontend. Conheça Barber Pro, Niver do Jão e Arena Pulse: projetos web, interfaces e aplicações com React e TypeScript."
+    />
+    <title>Gustavo Mendonça — Desenvolvedor Frontend</title>
+    <link rel="icon" href="assets/favicon-satoru.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="motion.css" />
+    <link rel="stylesheet" href="hero-video.css" />
+    <link rel="stylesheet" href="projects-tech.css" />
+    <link rel="stylesheet" href="brand.css" />
+    <link rel="stylesheet" href="project-details.css" />
+    <script src="project-data.js" defer></script>
+    <script src="app.js" defer></script>
+    <script src="project-details.js" defer></script>
+    <script src="hero-video.js" defer></script>
+    <script src="tech-filter.js" defer></script>
+  </head>
+  <body>
+    <a href="#conteudo" class="skip">Pular para o conteúdo</a>
+    <header class="site-header">
+      <a
+        class="logo kanji-logo"
+        href="#inicio"
+        aria-label="Gustavo Mendonça, início"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 80 80"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            fill="currentColor"
+            d="M67.5 38.07Q66.77 39.11 65.56 39.01Q64.34 38.92 62.94 38.62Q62.4 38.5 61.79 38.38Q61.18 38.25 60.57 38.19Q58.69 38.01 56.53 38.04Q54.38 38.07 52.43 38.25Q50.73 38.38 48.97 38.44Q47.21 38.5 45.44 38.5Q41.25 38.56 37.33 38.89Q33.41 39.23 30.5 40.99Q28.0 41.23 26.27 39.87Q24.54 38.5 23.27 36.98Q23.57 36.31 23.93 36.31Q24.3 36.31 24.54 35.89Q26.12 36.37 27.82 36.22Q29.52 36.07 31.23 35.82Q32.2 35.64 33.14 35.52Q34.08 35.4 34.99 35.4Q35.17 35.22 35.3 34.97Q35.42 34.73 35.54 34.49Q35.78 33.94 36.15 33.52Q36.51 33.09 37.3 33.15Q37.24 32.73 37.03 32.48Q36.82 32.24 36.51 32.0Q37.18 30.6 37.45 29.44Q37.73 28.29 38.27 26.77Q36.88 27.01 36.18 27.35Q35.48 27.68 34.45 28.29Q32.5 27.62 31.01 26.77Q29.52 25.92 29.34 23.85Q30.86 24.04 32.35 24.01Q33.84 23.98 35.17 23.85Q36.21 23.79 37.21 23.76Q38.21 23.73 39.12 23.79Q39.25 23.31 39.43 22.76Q39.61 22.21 39.85 21.61Q40.28 20.33 40.64 19.08Q41.01 17.84 40.7 16.99Q40.46 16.32 40.1 16.26Q39.73 16.2 39.31 16.32Q39.0 16.38 38.7 16.38Q38.39 16.38 38.03 16.26Q37.73 16.2 37.61 16.35Q37.48 16.5 37.36 16.68Q37.24 17.17 36.94 17.17Q34.75 16.87 33.26 15.86Q31.77 14.86 30.56 13.59Q30.92 12.92 31.68 12.8Q32.44 12.67 33.23 12.98Q33.9 12.43 34.84 12.37Q35.78 12.31 36.82 12.37Q37.3 12.37 37.76 12.37Q38.21 12.37 38.7 12.37Q39.43 12.31 40.25 12.22Q41.07 12.13 41.86 12.07Q43.44 11.88 44.93 11.76Q46.42 11.64 47.45 11.88Q49.58 11.09 52.07 10.88Q54.56 10.67 56.75 11.28Q58.93 11.88 60.15 13.71Q58.45 14.98 55.74 15.29Q53.04 15.59 50.24 15.65Q48.6 15.71 47.08 15.8Q45.56 15.89 44.29 16.14Q44.41 16.32 44.53 16.53Q44.65 16.75 44.77 16.93Q45.14 17.54 45.44 18.2Q45.75 18.87 45.69 19.84Q45.02 20.33 44.59 21.15Q44.17 21.97 43.92 23.0Q45.5 23.0 47.81 22.76Q50.12 22.52 51.88 22.21Q52.73 22.76 53.98 23.34Q55.23 23.92 56.26 24.83Q57.29 25.74 57.41 27.38Q56.87 27.86 56.23 27.9Q55.59 27.93 54.92 28.47Q54.74 29.87 54.35 31.48Q53.95 33.09 53.77 33.94Q55.04 34.73 56.29 34.61Q57.54 34.49 58.63 34.18Q59.3 34.0 59.9 33.88Q60.51 33.76 61.06 33.82Q61.91 33.88 62.85 34.46Q63.79 35.03 64.58 35.52Q65.31 35.95 66.32 36.46Q67.32 36.98 67.5 38.07ZM60.94 44.51Q60.51 45.06 59.9 45.27Q59.3 45.49 58.75 45.7Q58.2 45.91 57.78 46.52Q56.93 47.79 56.71 49.71Q56.5 51.62 56.29 53.54Q56.08 55.45 55.1 56.73Q55.1 57.15 55.32 57.43Q55.53 57.7 55.77 57.94Q56.02 58.25 56.17 58.49Q56.32 58.73 56.14 59.04Q53.71 59.34 50.91 59.49Q48.12 59.64 45.38 59.64Q42.65 59.64 40.34 59.64Q39.85 59.64 39.43 59.64Q39.0 59.64 38.58 59.64Q37.79 60.92 37.06 61.01Q36.33 61.1 35.6 60.55Q34.87 60.01 34.23 59.1Q33.59 58.18 32.99 57.46Q32.99 57.21 33.05 56.79Q33.23 54.84 33.32 53.38Q33.41 51.93 33.35 50.59Q33.29 49.25 32.93 47.61Q32.32 46.7 31.32 46.18Q30.31 45.67 29.83 44.63Q29.83 44.39 29.89 44.24Q29.95 44.09 30.07 44.03Q30.19 43.91 30.28 43.75Q30.37 43.6 30.31 43.24Q30.5 43.18 31.16 43.18Q31.83 43.18 32.62 43.12Q33.41 43.06 33.84 42.63Q35.17 42.45 36.75 42.39Q38.33 42.33 39.97 42.33Q43.26 42.33 46.48 42.05Q49.7 41.78 51.82 40.5Q54.68 41.05 56.96 41.81Q59.24 42.57 60.94 44.51ZM29.4 33.21Q27.76 33.88 26.27 32.85Q24.78 31.81 23.9 29.84Q23.02 27.86 23.27 25.8Q23.08 25.43 22.99 24.95Q22.9 24.46 22.41 24.4Q22.72 27.56 22.48 30.81Q22.23 34.06 21.62 36.74Q21.99 38.86 22.14 42.17Q22.29 45.49 22.26 49.25Q22.23 53.02 22.08 56.57Q21.93 60.13 21.62 62.74Q20.35 62.68 19.22 61.74Q18.1 60.8 17.49 59.31Q16.89 57.82 17.13 56.24Q17.86 56.48 17.95 56.03Q18.04 55.57 17.98 54.9Q17.98 54.6 17.98 54.48Q17.92 53.81 18.04 53.26Q18.16 52.72 18.83 52.66Q18.83 52.17 18.43 52.17Q18.04 52.17 18.04 51.74Q18.28 48.89 18.31 45.15Q18.34 41.41 18.46 36.86Q18.59 33.21 18.4 29.2Q18.22 25.19 17.98 21.42Q17.92 20.33 17.86 19.3Q17.8 18.26 17.74 17.23Q17.68 15.53 17.22 14.38Q16.76 13.22 16.19 12.25Q15.61 11.28 15.12 10.12Q16.34 9.15 17.4 9.27Q18.46 9.39 19.41 10.09Q20.35 10.79 21.26 11.58Q21.69 11.94 22.14 12.34Q22.6 12.73 23.02 12.98Q23.33 14.31 23.17 15.74Q23.02 17.17 22.78 18.57Q22.54 19.9 22.38 21.27Q22.23 22.64 22.41 23.98Q24.24 24.34 26.09 25.37Q27.94 26.41 29.01 28.32Q30.07 30.23 29.4 33.21ZM51.76 45.06Q48.06 45.06 44.23 45.36Q40.4 45.67 37.36 46.15Q37.36 46.34 37.36 46.55Q37.36 46.76 37.36 47.0Q37.36 49.56 37.42 52.2Q37.48 54.84 37.97 56.67Q38.82 56.54 39.91 56.51Q41.01 56.48 42.16 56.48Q44.23 56.42 46.32 56.33Q48.42 56.24 50.12 55.75Q51.22 53.45 51.31 50.74Q51.4 48.04 51.76 45.06ZM49.51 26.28Q48.36 26.04 46.87 26.16Q45.38 26.28 44.05 26.47Q43.74 26.53 43.44 26.56Q43.13 26.59 42.83 26.65Q41.92 28.72 40.92 30.72Q39.91 32.73 39.18 35.03Q40.34 34.85 41.95 34.79Q43.56 34.73 45.32 34.67Q47.08 34.61 48.54 34.49Q48.6 33.94 48.72 33.45Q48.85 32.97 48.91 32.48Q49.21 31.09 49.42 29.63Q49.64 28.17 49.51 26.28ZM13.42 25.37Q15.24 26.65 15.64 28.56Q16.03 30.48 15.55 32.6Q15.06 34.73 14.18 36.74Q13.3 38.74 12.57 40.2Q11.48 40.08 10.78 39.11Q10.08 38.13 9.56 36.8Q9.05 35.46 8.5 34.43Q10.44 32.54 11.45 29.99Q12.45 27.44 13.42 25.37Z"
+          />
+          <path fill="#b68af5" d="M43 70 70 62 65 68 45 73Z" />
+          <path fill="#9470d7" d="m70 59 4-2-2 5Z" /></svg
+      ></a>
+      <nav aria-label="Navegação principal">
+        <a href="#projetos">Projetos</a><a href="#sobre">Sobre</a
+        ><a href="#tecnologias">Tecnologias</a>
+      </nav>
+      <div class="header-controls">
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Ativar tema claro"
+          aria-pressed="false"
+        >
+          ☼</button
+        ><a class="header-contact" href="#contato"
+          >Vamos conversar <span>↗</span></a
+        >
       </div>
-      <div class="hero-bottom"><a href="#projetos" class="scroll-cue"><span>↓</span> CONHEÇA MEU TRABALHO</a><button class="film-toggle" id="film-toggle" type="button" aria-label="Reproduzir vídeo de fundo" aria-pressed="false">Reproduzir fundo ▷</button><div class="hero-social"><a href="https://www.linkedin.com/in/gustavo-mendon%C3%A7a-795395209/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div>
-    </section>
-    <div class="ticker" aria-hidden="true"><span>REACT</span><i>✧</i><span>TYPESCRIPT</span><i>✧</i><span>INTERFACES COM PROPÓSITO</span><i>✧</i><span>CÓDIGO EM EVOLUÇÃO</span></div>
-    <section class="section projects" id="projetos" aria-labelledby="projects-title">
-      <div class="section-intro"><p class="eyebrow">01 / PROJETOS SELECIONADOS</p><div class="section-title-row"><h2 id="projects-title">Do conceito<br />ao <em>código.</em></h2><p>Experimentos que viraram experiências.<br />Cada projeto, um próximo nível.</p></div></div>
-      <div class="work-gallery" aria-label="Galeria de projetos em perspectiva" aria-roledescription="carrossel">
-        <div class="gallery-heading"><span class="eyebrow">WORK GALLERY / EXPLORE EM MOVIMENTO</span><button id="gallery-autoplay" class="text-button" aria-pressed="true">Pausar rotação Ⅱ</button></div>
-        <div class="gallery-stage">
-          <button class="gallery-slide" data-slide="0" aria-label="Selecionar Barber Pro" aria-pressed="true"><span class="gallery-window">BARBER PRO / 01</span><img src="assets/barber-pro.jpg" alt="Interface real do Barber Pro" loading="lazy" /><span class="gallery-caption">BARBER PRO</span></button>
-          <button class="gallery-slide" data-slide="1" aria-label="Selecionar Niver do Jão" aria-pressed="false"><span class="gallery-window">NIVER DO JÃO / 02</span><img class="birthday-shot" src="assets/niver-jao.jpg" alt="Recorte da interface do convite e da confirmação de presença" loading="lazy" /><span class="gallery-caption">NIVER DO JÃO</span></button>
-          <button class="gallery-slide" data-slide="2" aria-label="Selecionar Arena Pulse" aria-pressed="false"><span class="gallery-window">ARENA PULSE / 03</span><img src="assets/arena-pulse.png" alt="Dashboard Arena Pulse" loading="lazy" /><span class="gallery-caption">ARENA PULSE</span></button>
+    </header>
+    <main id="conteudo">
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="hero-film" aria-hidden="true">
+          <img
+            class="hero-film-poster"
+            src="assets/jujutsu-source-poster.jpg"
+            alt=""
+            width="1020"
+            height="576"
+            fetchpriority="high"
+          /><video
+            class="hero-film-video"
+            muted
+            loop
+            playsinline
+            preload="none"
+            poster="assets/jujutsu-source-poster.jpg"
+            data-video-src="assets/jujutsu-source.mp4"
+            tabindex="-1"
+            disablepictureinpicture
+          ></video>
+          <div class="hero-film-shade"></div>
         </div>
-        <div class="gallery-navigation"><button id="gallery-prev" class="gallery-arrow" aria-label="Projeto anterior">←</button><div class="gallery-dots" role="group" aria-label="Escolher projeto"><button data-gallery-dot="0" class="active" aria-label="Mostrar Barber Pro" aria-pressed="true"></button><button data-gallery-dot="1" aria-label="Mostrar Niver do Jão" aria-pressed="false"></button><button data-gallery-dot="2" aria-label="Mostrar Arena Pulse" aria-pressed="false"></button></div><button id="gallery-next" class="gallery-arrow" aria-label="Próximo projeto">→</button></div>
-        <div class="gallery-description"><p class="gallery-index" id="gallery-index">01 / 03</p><h3 id="gallery-title">Barber Pro</h3><p id="gallery-summary">Agendamento para barbearia, escolha de serviços e vitrine de produtos.</p><a id="gallery-link" href="https://barber-pro-teste.onrender.com" target="_blank" rel="noopener noreferrer">Explorar projeto ↗</a></div><p class="sr-only" id="gallery-status" role="status"></p>
+        <div class="hero-top">
+          <p class="eyebrow">
+            <span class="tiny-dot"></span> CÓDIGO, PROJETOS, E MINHA PERSONALIDADE.
+          </p>
+          <span class="edition">PORTFÓLIO / GUSTAVO MENDONÇA</span>
+        </div>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <h1 id="hero-title">
+              Gustavo<br /><em>Mendonça<span>.</span></em>
+            </h1>
+            <p class="hero-role">Desenvolvedor Frontend</p>
+            <p class="hero-description">
+              Construo aplicações web com React e TypeScript. Gosto de
+              transformar ideias em interfaces e aprender desenvolvendo projetos.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-light" href="#projetos"
+                >Ver projetos <span>↗</span></a
+              ><a
+                class="hero-github"
+                href="https://github.com/gohenj"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub <span>↗</span></a
+              >
+            </div>
+            <p id="film-status" class="sr-only" role="status"></p>
+          </div>
+        </div>
+        <div class="hero-bottom">
+          <a href="#projetos" class="scroll-cue"
+            ><span>↓</span> CONHEÇA MEU TRABALHO</a
+          ><button
+            class="film-toggle"
+            id="film-toggle"
+            type="button"
+            aria-label="Reproduzir vídeo de fundo"
+            aria-pressed="false"
+          >
+            Reproduzir fundo ▷
+          </button>
+          <div class="hero-social">
+            <a
+              href="https://www.linkedin.com/in/gustavo-mendon%C3%A7a-795395209/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn ↗</a
+            >
+          </div>
+        </div>
+      </section>
+      <div class="ticker" aria-hidden="true">
+        <span>REACT</span><i>✧</i><span>TYPESCRIPT</span><i>✧</i
+        ><span>INTERFACES COM PROPÓSITO</span><i>✧</i
+        ><span>CÓDIGO EM EVOLUÇÃO</span>
       </div>
-      <div class="project-filters" role="group" aria-label="Filtrar lista de projetos"><button class="active" data-filter="all" aria-pressed="true">Todos <span>03</span></button><button data-filter="frontend" aria-pressed="false">Frontend <span>02</span></button><button data-filter="webapp" aria-pressed="false">Aplicação web <span>01</span></button></div>
-      <p class="sr-only" id="project-status" role="status">3 projetos exibidos.</p>
-      <article class="project featured-project" data-category="webapp" id="projeto-barber">
-        <a class="project-image real-preview barber-preview" href="https://barber-pro-teste.onrender.com" target="_blank" rel="noopener noreferrer" aria-label="Abrir Barber Pro"><div class="image-toolbar"><span><i></i><i></i><i></i></span><small>BARBER PRO / CAPTURA REAL</small><span>↗</span></div><img src="assets/barber-pro.jpg" width="1280" height="720" alt="Página do Barber Pro, com apresentação dos serviços e início do agendamento" loading="lazy" /><span class="image-open">Abrir aplicação ↗</span></a>
-        <div class="project-info"><div class="project-meta"><span>01 — APLICAÇÃO PARA BARBEARIA</span><span class="project-state">PUBLICADO</span></div><h3>Barber Pro<span>↗</span></h3><p>Do serviço ao horário: uma experiência de agendamento para barbearia, com seleção de profissional, catálogo de cortes e vitrine de produtos.</p><div class="project-features"><span>Serviços e horários</span><span>Catálogo e produtos</span><span>Entrada e cadastro</span></div><div class="tags"><span>Aplicação web</span><span>Agendamento</span><span>Render</span></div><div class="project-links"><a href="https://barber-pro-teste.onrender.com" target="_blank" rel="noopener noreferrer">Abrir projeto ↗</a><button class="text-button" data-detail="barber">Como funciona <span>+</span></button></div></div>
-      </article>
-      <div class="project-pair">
-        <article class="project" data-category="frontend" id="projeto-niver"><a class="project-image real-preview birthday-preview" href="https://niver-do-jao.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Abrir Niver do Jão"><img src="assets/niver-jao.jpg" width="1280" height="540" alt="Recorte real do convite de aniversário com nome, idade e formulário de presença" loading="lazy" /><span class="image-open">Ver convite ↗</span></a><div class="project-info"><div class="project-meta"><span>02 — CONVITE DIGITAL</span><span class="project-state">PUBLICADO</span></div><h3>Niver do Jão<span>↗</span></h3><p>Um convite com identidade de futebol brasileiro, informações da comemoração e formulário para os convidados confirmarem presença.</p><div class="tags"><span>React</span><span>JavaScript</span><span>Tailwind CSS</span><span>Vite</span></div><div class="project-links"><a href="https://niver-do-jao.vercel.app" target="_blank" rel="noopener noreferrer">Abrir projeto ↗</a><a href="https://github.com/gohenj/niver_do_jao" target="_blank" rel="noopener noreferrer">Código ↗</a><button class="text-button" data-detail="birthday">Detalhes <span>+</span></button></div></div></article>
-        <article class="project" data-category="frontend" id="projeto-arena"><a class="project-image real-preview arena-preview" href="projects/arena/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demonstração do Arena Pulse"><img src="assets/arena-pulse.png" width="1440" height="1433" alt="Dashboard Arena Pulse com estatísticas e partidas de esports" loading="lazy" /><span class="image-open">Explorar a arena ↗</span></a><div class="project-info"><div class="project-meta"><span>03 — ESPORTS DASHBOARD</span><span>PRIMEIRO SPRINT</span></div><h3>Arena Pulse<span>↗</span></h3><p>Dashboard de esports com busca, filtros por jogo e favoritos persistidos no navegador. Componentes reutilizáveis e dados tipados em uma interface responsiva.</p><div class="tags"><span>React</span><span>TypeScript</span><span>Tailwind CSS</span><span>Vite</span></div><div class="project-links"><a href="projects/arena/" target="_blank" rel="noopener noreferrer">Ver demonstração ↗</a><button class="text-button" data-detail="arena">Sobre o projeto <span>+</span></button></div></div></article>
+      <section
+        class="section projects"
+        id="projetos"
+        aria-labelledby="projects-title"
+      >
+        <div class="section-intro">
+          <p class="eyebrow">01 / PROJETOS SELECIONADOS</p>
+          <div class="section-title-row">
+            <h2 id="projects-title">Do conceito<br />ao <em>código.</em></h2>
+            <p>
+              Experimentos que viraram experiências.
+            </p>
+          </div>
+        </div>
+        <div
+          class="work-gallery"
+          aria-label="Galeria de projetos em perspectiva"
+          aria-roledescription="carrossel"
+        >
+          <div class="gallery-heading">
+            <span class="eyebrow">WORK GALLERY / EXPLORE EM MOVIMENTO</span
+            ><button
+              id="gallery-autoplay"
+              class="text-button"
+              aria-pressed="true"
+            >
+              Pausar rotação Ⅱ
+            </button>
+          </div>
+          <div class="gallery-stage">
+            <button
+              class="gallery-slide"
+              data-slide="0"
+              aria-label="Selecionar Barber Pro"
+              aria-pressed="true"
+            >
+              <span class="gallery-window">BARBER PRO / 01</span
+              ><img
+                src="assets/barber-pro.jpg"
+                alt="Interface real do Barber Pro"
+                loading="lazy"
+              /><span class="gallery-caption">BARBER PRO</span>
+            </button>
+            <button
+              class="gallery-slide"
+              data-slide="1"
+              aria-label="Selecionar Niver do Jão"
+              aria-pressed="false"
+            >
+              <span class="gallery-window">NIVER DO JÃO / 02</span
+              ><img
+                class="birthday-shot"
+                src="assets/niver-jao.jpg"
+                alt="Recorte da interface do convite e da confirmação de presença"
+                loading="lazy"
+              /><span class="gallery-caption">NIVER DO JÃO</span>
+            </button>
+            <button
+              class="gallery-slide"
+              data-slide="2"
+              aria-label="Selecionar Arena Pulse"
+              aria-pressed="false"
+            >
+              <span class="gallery-window">ARENA PULSE / 03</span
+              ><img
+                src="assets/arena-pulse.png"
+                alt="Dashboard Arena Pulse"
+                loading="lazy"
+              /><span class="gallery-caption">ARENA PULSE</span>
+            </button>
+          </div>
+          <div class="gallery-navigation">
+            <button
+              id="gallery-prev"
+              class="gallery-arrow"
+              aria-label="Projeto anterior"
+            >
+              ←
+            </button>
+            <div
+              class="gallery-dots"
+              role="group"
+              aria-label="Escolher projeto"
+            >
+              <button
+                data-gallery-dot="0"
+                class="active"
+                aria-label="Mostrar Barber Pro"
+                aria-pressed="true"
+              ></button
+              ><button
+                data-gallery-dot="1"
+                aria-label="Mostrar Niver do Jão"
+                aria-pressed="false"
+              ></button
+              ><button
+                data-gallery-dot="2"
+                aria-label="Mostrar Arena Pulse"
+                aria-pressed="false"
+              ></button>
+            </div>
+            <button
+              id="gallery-next"
+              class="gallery-arrow"
+              aria-label="Próximo projeto"
+            >
+              →
+            </button>
+          </div>
+          <div class="gallery-description">
+            <p class="gallery-index" id="gallery-index">01 / 03</p>
+            <h3 id="gallery-title">Barber Pro</h3>
+            <p id="gallery-summary">
+              Agendamento para barbearia, escolha de serviços e vitrine de
+              produtos.
+            </p>
+            <a
+              id="gallery-link"
+              href="https://barber-pro-teste.onrender.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Explorar projeto ↗</a
+            >
+          </div>
+          <p class="sr-only" id="gallery-status" role="status"></p>
+        </div>
+        <div
+          class="project-filters"
+          role="group"
+          aria-label="Filtrar lista de projetos"
+        >
+          <button class="active" data-filter="all" aria-pressed="true">
+            Todos <span>03</span></button
+          ><button data-filter="frontend" aria-pressed="false">
+            Frontend <span>02</span></button
+          ><button data-filter="webapp" aria-pressed="false">
+            Aplicação web <span>01</span>
+          </button>
+        </div>
+        <p class="sr-only" id="project-status" role="status">
+          3 projetos exibidos.
+        </p>
+        <article
+          class="project featured-project"
+          data-category="webapp"
+          id="projeto-barber"
+        >
+          <a
+            class="project-image real-preview barber-preview"
+            href="https://barber-pro-teste.onrender.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir Barber Pro"
+            ><div class="image-toolbar">
+              <span><i></i><i></i><i></i></span
+              ><small>BARBER PRO / CAPTURA REAL</small><span>↗</span>
+            </div>
+            <img
+              src="assets/barber-pro.jpg"
+              width="1280"
+              height="720"
+              alt="Página do Barber Pro, com apresentação dos serviços e início do agendamento"
+              loading="lazy"
+            /><span class="image-open">Abrir aplicação ↗</span></a
+          >
+          <div class="project-info">
+            <div class="project-meta">
+              <span>01 — APLICAÇÃO PARA BARBEARIA</span
+              ><span class="project-state">PUBLICADO</span>
+            </div>
+            <h3>Barber Pro<span>↗</span></h3>
+            <p>
+              Do serviço ao horário: uma experiência de agendamento para
+              barbearia, com seleção de profissional, catálogo de cortes e
+              vitrine de produtos.
+            </p>
+            <div class="project-features">
+              <span>Serviços e horários</span><span>Catálogo e produtos</span
+              ><span>Entrada e cadastro</span>
+            </div>
+            <div class="tags">
+              <span>Python</span><span>Flask</span><span>SQLite</span><span>Render</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://barber-pro-teste.onrender.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Abrir projeto ↗</a
+              ><button class="text-button" data-detail="barber">Saiba mais <span>+</span>
+              </button>
+            </div>
+          </div>
+        </article>
+        <div class="project-pair">
+          <article class="project" data-category="frontend" id="projeto-niver">
+            <a
+              class="project-image real-preview birthday-preview"
+              href="https://niver-do-jao.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir Niver do Jão"
+              ><img
+                src="assets/niver-jao.jpg"
+                width="1280"
+                height="540"
+                alt="Recorte real do convite de aniversário com nome, idade e formulário de presença"
+                loading="lazy"
+              /><span class="image-open">Ver convite ↗</span></a
+            >
+            <div class="project-info">
+              <div class="project-meta">
+                <span>02 — CONVITE DIGITAL</span
+                ><span class="project-state">PUBLICADO</span>
+              </div>
+              <h3>Niver do Jão<span>↗</span></h3>
+              <p>
+                Um convite com identidade de futebol brasileiro, informações da
+                comemoração e formulário para os convidados confirmarem
+                presença.
+              </p>
+              <div class="tags">
+                <span>React</span><span>JavaScript</span
+                ><span>Tailwind CSS</span><span>Vite</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://niver-do-jao.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Abrir projeto ↗</a
+                ><a
+                  href="https://github.com/gohenj/niver_do_jao"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Código ↗</a
+                ><button class="text-button" data-detail="birthday">Saiba mais <span>+</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="project" data-category="frontend" id="projeto-arena">
+            <a
+              class="project-image real-preview arena-preview"
+              href="projects/arena/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir demonstração do Arena Pulse"
+              ><img
+                src="assets/arena-pulse.png"
+                width="1440"
+                height="1433"
+                alt="Dashboard Arena Pulse com estatísticas e partidas de esports"
+                loading="lazy"
+              /><span class="image-open">Explorar a arena ↗</span></a
+            >
+            <div class="project-info">
+              <div class="project-meta">
+                <span>03 — ESPORTS DASHBOARD</span><span>PRIMEIRO SPRINT</span>
+              </div>
+              <h3>Arena Pulse<span>↗</span></h3>
+              <p>
+                Dashboard de esports com busca, filtros por jogo e favoritos
+                persistidos no navegador. Componentes reutilizáveis e dados
+                tipados em uma interface responsiva.
+              </p>
+              <div class="tags">
+                <span>React</span><span>TypeScript</span
+                ><span>Tailwind CSS</span><span>Vite</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="projects/arena/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver demonstração ↗</a
+                ><button class="text-button" data-detail="arena">Saiba mais <span>+</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <a
+          class="all-projects"
+          href="https://github.com/gohenj?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Outras ideias em construção <span>Ver todos no GitHub ↗</span></a
+        >
+      </section>
+      <section class="section about" id="sobre" aria-labelledby="about-title">
+        <div class="about-title">
+          <p class="eyebrow">02 / POR TRÁS DO CÓDIGO</p>
+          <h2 id="about-title">
+            Curiosidade<br />é minha<br /><em>energia.</em>
+          </h2>
+          <div class="signature">Gustavo Mendonça <span>↗</span></div>
+        </div>
+        <div class="about-copy">
+          <span class="about-kicker">PRAZER, GUSTAVO.</span>
+          <p class="about-lead">
+            Gosto de entender como as coisas funcionam.<br />E de descobrir como
+            fazê-las funcionar melhor.
+          </p>
+          <p>
+            Sou estudante de programação e desenvolvo projetos pessoais e
+            acadêmicos. Meu foco está no frontend: criar interfaces que sejam
+            agradáveis de usar e façam sentido para quem está do outro lado da
+            tela.
+          </p>
+          <p>
+            Também exploro o que acontece por trás delas, construindo APIs com
+            Node.js e Java e conectando aplicações a bancos de dados. Aprendo
+            colocando a mão no código, testando e melhorando a cada projeto.
+          </p>
+          <div class="about-principles">
+            <span><b>01</b> Atenção ao detalhe</span
+            ><span><b>02</b> Aprender construindo</span
+            ><span><b>03</b> Evoluir com feedback</span>
+          </div>
+          <p class="anime-note">
+            <span>✧</span> Inspirado pela energia de Jujutsu Kaisen.<br />Movido
+            pela vontade de construir algo meu.
+          </p>
+        </div>
+      </section>
+      <section
+        class="section tech"
+        id="tecnologias"
+        aria-labelledby="tech-title"
+      >
+        <div class="section-intro">
+          <p class="eyebrow">03 / TECNOLOGIAS NA PRÁTICA</p>
+          <div class="section-title-row">
+            <h2 id="tech-title">Meu kit<br />de <em>construção.</em></h2>
+            <p>
+              React e TypeScript no foco.<br />Outras ferramentas que já usei
+              pelo caminho.
+            </p>
+          </div>
+        </div>
+        <div
+          class="stack-filters"
+          role="group"
+          aria-label="Filtrar tecnologias por área"
+        >
+          <button
+            class="active"
+            data-tech-filter="frontend"
+            aria-pressed="true"
+          >
+            Frontend <span>10</span></button
+          ><button data-tech-filter="backend" aria-pressed="false">
+            Backend <span>07</span></button
+          ><button data-tech-filter="data" aria-pressed="false">
+            Dados <span>05</span></button
+          ><button data-tech-filter="tools" aria-pressed="false">
+            Ferramentas <span>06</span>
+          </button>
+        </div>
+        <p class="sr-only" id="tech-status" role="status">
+          10 tecnologias de Frontend.
+        </p>
+        <div class="stack-grid">
+          <article
+            class="stack-card"
+            data-tech-area="frontend"
+            style="--tech-accent: #61dafb"
+          >
+            <div class="stack-symbol react">
+              <img
+                src="assets/tech/react.svg"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </div>
+            <h3>React</h3>
+            <p>Biblioteca de interfaces</p>
+            <div class="stack-evidence">
+              <a href="#projeto-arena">Arena Pulse · Niver do Jão ↗</a>
+            </div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="frontend"
+            style="--tech-accent: #3178c6"
+          >
+            <div class="stack-symbol typescript">
+              <img
+                src="assets/tech/typescript.svg"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </div>
+            <h3>TypeScript</h3>
+            <p>Linguagem</p>
+            <div class="stack-evidence">
+              <a href="#projeto-arena">Arena Pulse ↗</a>
+            </div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="frontend"
+            style="--tech-accent: #38bdf8"
+          >
+            <div class="stack-symbol tailwind">
+              <img
+                src="assets/tech/tailwind.svg"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </div>
+            <h3>Tailwind CSS</h3>
+            <p>Estilos utilitários</p>
+            <div class="stack-evidence">
+              <a href="#projeto-niver">Arena Pulse · Niver do Jão ↗</a>
+            </div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="frontend"
+            style="--tech-accent: #f7df1e"
+          >
+            <div class="stack-symbol javascript">
+              <img
+                src="assets/tech/javascript.svg"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </div>
+            <h3>JavaScript</h3>
+            <p>Linguagem</p>
+            <div class="stack-evidence">
+              <a href="#projeto-niver">Niver do Jão ↗</a>
+            </div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="frontend"
+            style="--tech-accent: #e34f26"
+          >
+            <div class="stack-symbol html">
+              <img
+                src="assets/tech/html.svg"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </div>
+            <h3>HTML</h3>
+            <p>Estrutura da web</p>
+            <div class="stack-evidence">
+              <a href="#projetos">Projetos web ↗</a>
+            </div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="frontend"
+            style="--tech-accent: #1572b6"
+          >
+            <div class="stack-symbol css">
+              <img
+                src="assets/tech/css.svg"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </div>
+            <h3>CSS</h3>
+            <p>Estilos e responsividade</p>
+            <div class="stack-evidence">
+              <a href="#projetos">Projetos web ↗</a>
+            </div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="frontend"
+            style="--tech-accent: #dd0031"
+          >
+            <div class="stack-symbol angular">
+              <img
+                src="assets/tech/angular.svg"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </div>
+            <h3>Angular</h3>
+            <p>Framework</p>
+            <div class="stack-evidence"><span>Projeto acadêmico</span></div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="frontend"
+            style="--tech-accent: #0081cb"
+          >
+            <div class="stack-symbol mui">
+              <img
+                src="assets/tech/mui.svg"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </div>
+            <h3>Material UI</h3>
+            <p>Componentes de interface</p>
+            <div class="stack-evidence"><span>Projetos anteriores</span></div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="frontend"
+            style="--tech-accent: #f46c7d"
+          >
+            <div class="stack-symbol router">
+              <svg
+                viewBox="0 0 32 32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M8 8h7a5 5 0 0 1 5 5v6M8 8l4-4M8 8l4 4M24 24h-7a5 5 0 0 1-5-5v-6M24 24l-4-4M24 24l-4 4"
+                />
+              </svg>
+            </div>
+            <h3>React Router</h3>
+            <p>Navegação</p>
+            <div class="stack-evidence"><span>Projetos anteriores</span></div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="frontend"
+            style="--tech-accent: #a58ae9"
+          >
+            <div class="stack-symbol axios">
+              <svg
+                viewBox="0 0 32 32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="m19 3-9 13h6l-3 13 10-16h-6l2-10Z" />
+              </svg>
+            </div>
+            <h3>Axios</h3>
+            <p>Cliente HTTP</p>
+            <div class="stack-evidence"><span>Projetos anteriores</span></div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="backend"
+            style="--tech-accent: #83cd29"
+            hidden
+          >
+            <div class="stack-symbol node">
+              <img
+                src="assets/tech/node.svg"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </div>
+            <h3>Node.js</h3>
+            <p>Ambiente JavaScript</p>
+            <div class="stack-evidence"><span>Projetos anteriores</span></div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="backend"
+            style="--tech-accent: #c2c5d0"
+            hidden
+          >
+            <div class="stack-symbol express">
+              <img
+                src="assets/tech/express.svg"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </div>
+            <h3>Express</h3>
+            <p>Framework de servidor</p>
+            <div class="stack-evidence"><span>Projetos anteriores</span></div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="backend"
+            style="--tech-accent: #ee7650"
+            hidden
+          >
+            <div class="stack-symbol java">
+              <img
+                src="assets/tech/java.svg"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </div>
+            <h3>Java</h3>
+            <p>Linguagem</p>
+            <div class="stack-evidence"><span>Projetos acadêmicos</span></div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="backend"
+            style="--tech-accent: #6db33f"
+            hidden
+          >
+            <div class="stack-symbol spring">
+              <img
+                src="assets/tech/spring.svg"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </div>
+            <h3>Spring Boot</h3>
+            <p>Framework de servidor</p>
+            <div class="stack-evidence"><span>Projetos acadêmicos</span></div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="backend"
+            style="--tech-accent: #8cbbfa"
+            hidden
+          >
+            <div class="stack-symbol api">
+              <svg
+                viewBox="0 0 32 32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="m10 8-7 8 7 8M22 8l7 8-7 8M19 4l-6 24" />
+              </svg>
+            </div>
+            <h3>APIs REST</h3>
+            <p>Comunicação HTTP</p>
+            <div class="stack-evidence"><span>Projetos anteriores</span></div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="backend"
+            style="--tech-accent: #d5a5f5"
+            hidden
+          >
+            <div class="stack-symbol jwt">
+              <svg
+                viewBox="0 0 32 32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M16 3v26M3 16h26M7 7l18 18M25 7 7 25" />
+              </svg>
+            </div>
+            <h3>JWT</h3>
+            <p>Autenticação</p>
+            <div class="stack-evidence"><span>Projetos anteriores</span></div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="backend"
+            style="--tech-accent: #d6b075"
+            hidden
+          >
+            <div class="stack-symbol lock">
+              <svg
+                viewBox="0 0 32 32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <rect x="7" y="13" width="18" height="15" rx="3" />
+                <path d="M11 13V9a5 5 0 0 1 10 0v4M16 19v4" />
+              </svg>
+            </div>
+            <h3>bcrypt</h3>
+            <p>Hash de senhas</p>
+            <div class="stack-evidence"><span>Projetos anteriores</span></div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="data"
+            style="--tech-accent: #4db33d"
+            hidden
+          >
+            <div class="stack-symbol mongodb">
+              <img
+                src="assets/tech/mongodb.svg"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </div>
+            <h3>MongoDB</h3>
+            <p>Banco de documentos</p>
+            <div class="stack-evidence"><span>Projetos anteriores</span></div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="data"
+            style="--tech-accent: #4db33d"
+            hidden
+          >
+            <div class="stack-symbol mongodb">
+              <img
+                src="assets/tech/mongodb.svg"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </div>
+            <h3>MongoDB Atlas</h3>
+            <p>Banco hospedado</p>
+            <div class="stack-evidence"><span>Projetos anteriores</span></div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="data"
+            style="--tech-accent: #8baad2"
+            hidden
+          >
+            <div class="stack-symbol database">
+              <svg
+                viewBox="0 0 32 32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <ellipse cx="16" cy="7" rx="11" ry="4" />
+                <path d="M5 7v18c0 5 22 5 22 0V7M5 16c0 5 22 5 22 0" />
+              </svg>
+            </div>
+            <h3>H2</h3>
+            <p>Banco relacional</p>
+            <div class="stack-evidence"><span>Projetos acadêmicos</span></div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="data"
+            style="--tech-accent: #d27c75"
+            hidden
+          >
+            <div class="stack-symbol database">
+              <svg
+                viewBox="0 0 32 32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <ellipse cx="16" cy="7" rx="11" ry="4" />
+                <path d="M5 7v18c0 5 22 5 22 0V7M5 16c0 5 22 5 22 0" />
+              </svg>
+            </div>
+            <h3>Mongoose</h3>
+            <p>Modelagem de documentos</p>
+            <div class="stack-evidence"><span>Projetos anteriores</span></div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="data"
+            style="--tech-accent: #6db33f"
+            hidden
+          >
+            <div class="stack-symbol spring">
+              <img
+                src="assets/tech/spring.svg"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </div>
+            <h3>Spring Data JPA</h3>
+            <p>Persistência de dados</p>
+            <div class="stack-evidence"><span>Projetos acadêmicos</span></div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="tools"
+            style="--tech-accent: #f05032"
+            hidden
+          >
+            <div class="stack-symbol git">
+              <img
+                src="assets/tech/git.svg"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </div>
+            <h3>Git</h3>
+            <p>Controle de versão</p>
+            <div class="stack-evidence">
+              <span>Fluxo de desenvolvimento</span>
+            </div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="tools"
+            style="--tech-accent: #d0d4df"
+            hidden
+          >
+            <div class="stack-symbol github">
+              <img
+                src="assets/tech/github.svg"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </div>
+            <h3>GitHub</h3>
+            <p>Repositórios</p>
+            <div class="stack-evidence">
+              <a
+                href="https://github.com/gohenj"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Projetos públicos ↗</a
+              >
+            </div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="tools"
+            style="--tech-accent: #bd7cff"
+            hidden
+          >
+            <div class="stack-symbol vite">
+              <img
+                src="assets/tech/vite.svg"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </div>
+            <h3>Vite</h3>
+            <p>Ferramenta de desenvolvimento</p>
+            <div class="stack-evidence">
+              <a href="#projeto-niver">Arena Pulse · Niver do Jão ↗</a>
+            </div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="tools"
+            style="--tech-accent: #cb3837"
+            hidden
+          >
+            <div class="stack-symbol npm">
+              <img
+                src="assets/tech/npm.svg"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </div>
+            <h3>npm</h3>
+            <p>Dependências</p>
+            <div class="stack-evidence"><span>Projetos JavaScript</span></div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="tools"
+            style="--tech-accent: #d46d91"
+            hidden
+          >
+            <div class="stack-symbol maven">
+              <img
+                src="assets/tech/maven.svg"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </div>
+            <h3>Maven</h3>
+            <p>Build e dependências</p>
+            <div class="stack-evidence"><span>Projetos Java</span></div>
+          </article>
+          <article
+            class="stack-card"
+            data-tech-area="tools"
+            style="--tech-accent: #ee7650"
+            hidden
+          >
+            <div class="stack-symbol java">
+              <img
+                src="assets/tech/java.svg"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </div>
+            <h3>JavaFX</h3>
+            <p>Interface desktop</p>
+            <div class="stack-evidence"><span>Projetos acadêmicos</span></div>
+          </article>
+        </div>
+        <p class="stack-note">
+          Tecnologias utilizadas em projetos pessoais e acadêmicos. Os links
+          indicam exemplos; as demais fazem parte de experiências anteriores.
+        </p>
+      </section>
+      <section
+        class="contact section"
+        id="contato"
+        aria-labelledby="contact-title"
+      >
+        <p class="eyebrow">04 / O PRÓXIMO CAPÍTULO</p>
+        <div class="contact-grid">
+          <h2 id="contact-title">
+            Vamos criar<br />algo <em>fora<br />do comum.</em
+            ><span class="contact-star" aria-hidden="true">✧</span>
+          </h2>
+          <div class="contact-copy">
+            <p>
+              Uma oportunidade, uma ideia<br />ou uma boa conversa sobre código.
+            </p>
+            <p class="contact-sub">
+              Meu próximo desafio pode começar com um oi.
+            </p>
+            <a
+              class="contact-link"
+              href="https://www.linkedin.com/in/gustavo-mendon%C3%A7a-795395209/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span><small>VAMOS CONVERSAR</small>LinkedIn</span
+              ><span>↗</span></a
+            ><a
+              class="contact-link"
+              href="https://github.com/gohenj"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span><small>ACOMPANHE MEU CÓDIGO</small>github.com/gohenj</span
+              ><span>↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <a class="logo kanji-logo" href="#inicio" aria-label="Voltar ao início"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 80 80"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            fill="currentColor"
+            d="M67.5 38.07Q66.77 39.11 65.56 39.01Q64.34 38.92 62.94 38.62Q62.4 38.5 61.79 38.38Q61.18 38.25 60.57 38.19Q58.69 38.01 56.53 38.04Q54.38 38.07 52.43 38.25Q50.73 38.38 48.97 38.44Q47.21 38.5 45.44 38.5Q41.25 38.56 37.33 38.89Q33.41 39.23 30.5 40.99Q28.0 41.23 26.27 39.87Q24.54 38.5 23.27 36.98Q23.57 36.31 23.93 36.31Q24.3 36.31 24.54 35.89Q26.12 36.37 27.82 36.22Q29.52 36.07 31.23 35.82Q32.2 35.64 33.14 35.52Q34.08 35.4 34.99 35.4Q35.17 35.22 35.3 34.97Q35.42 34.73 35.54 34.49Q35.78 33.94 36.15 33.52Q36.51 33.09 37.3 33.15Q37.24 32.73 37.03 32.48Q36.82 32.24 36.51 32.0Q37.18 30.6 37.45 29.44Q37.73 28.29 38.27 26.77Q36.88 27.01 36.18 27.35Q35.48 27.68 34.45 28.29Q32.5 27.62 31.01 26.77Q29.52 25.92 29.34 23.85Q30.86 24.04 32.35 24.01Q33.84 23.98 35.17 23.85Q36.21 23.79 37.21 23.76Q38.21 23.73 39.12 23.79Q39.25 23.31 39.43 22.76Q39.61 22.21 39.85 21.61Q40.28 20.33 40.64 19.08Q41.01 17.84 40.7 16.99Q40.46 16.32 40.1 16.26Q39.73 16.2 39.31 16.32Q39.0 16.38 38.7 16.38Q38.39 16.38 38.03 16.26Q37.73 16.2 37.61 16.35Q37.48 16.5 37.36 16.68Q37.24 17.17 36.94 17.17Q34.75 16.87 33.26 15.86Q31.77 14.86 30.56 13.59Q30.92 12.92 31.68 12.8Q32.44 12.67 33.23 12.98Q33.9 12.43 34.84 12.37Q35.78 12.31 36.82 12.37Q37.3 12.37 37.76 12.37Q38.21 12.37 38.7 12.37Q39.43 12.31 40.25 12.22Q41.07 12.13 41.86 12.07Q43.44 11.88 44.93 11.76Q46.42 11.64 47.45 11.88Q49.58 11.09 52.07 10.88Q54.56 10.67 56.75 11.28Q58.93 11.88 60.15 13.71Q58.45 14.98 55.74 15.29Q53.04 15.59 50.24 15.65Q48.6 15.71 47.08 15.8Q45.56 15.89 44.29 16.14Q44.41 16.32 44.53 16.53Q44.65 16.75 44.77 16.93Q45.14 17.54 45.44 18.2Q45.75 18.87 45.69 19.84Q45.02 20.33 44.59 21.15Q44.17 21.97 43.92 23.0Q45.5 23.0 47.81 22.76Q50.12 22.52 51.88 22.21Q52.73 22.76 53.98 23.34Q55.23 23.92 56.26 24.83Q57.29 25.74 57.41 27.38Q56.87 27.86 56.23 27.9Q55.59 27.93 54.92 28.47Q54.74 29.87 54.35 31.48Q53.95 33.09 53.77 33.94Q55.04 34.73 56.29 34.61Q57.54 34.49 58.63 34.18Q59.3 34.0 59.9 33.88Q60.51 33.76 61.06 33.82Q61.91 33.88 62.85 34.46Q63.79 35.03 64.58 35.52Q65.31 35.95 66.32 36.46Q67.32 36.98 67.5 38.07ZM60.94 44.51Q60.51 45.06 59.9 45.27Q59.3 45.49 58.75 45.7Q58.2 45.91 57.78 46.52Q56.93 47.79 56.71 49.71Q56.5 51.62 56.29 53.54Q56.08 55.45 55.1 56.73Q55.1 57.15 55.32 57.43Q55.53 57.7 55.77 57.94Q56.02 58.25 56.17 58.49Q56.32 58.73 56.14 59.04Q53.71 59.34 50.91 59.49Q48.12 59.64 45.38 59.64Q42.65 59.64 40.34 59.64Q39.85 59.64 39.43 59.64Q39.0 59.64 38.58 59.64Q37.79 60.92 37.06 61.01Q36.33 61.1 35.6 60.55Q34.87 60.01 34.23 59.1Q33.59 58.18 32.99 57.46Q32.99 57.21 33.05 56.79Q33.23 54.84 33.32 53.38Q33.41 51.93 33.35 50.59Q33.29 49.25 32.93 47.61Q32.32 46.7 31.32 46.18Q30.31 45.67 29.83 44.63Q29.83 44.39 29.89 44.24Q29.95 44.09 30.07 44.03Q30.19 43.91 30.28 43.75Q30.37 43.6 30.31 43.24Q30.5 43.18 31.16 43.18Q31.83 43.18 32.62 43.12Q33.41 43.06 33.84 42.63Q35.17 42.45 36.75 42.39Q38.33 42.33 39.97 42.33Q43.26 42.33 46.48 42.05Q49.7 41.78 51.82 40.5Q54.68 41.05 56.96 41.81Q59.24 42.57 60.94 44.51ZM29.4 33.21Q27.76 33.88 26.27 32.85Q24.78 31.81 23.9 29.84Q23.02 27.86 23.27 25.8Q23.08 25.43 22.99 24.95Q22.9 24.46 22.41 24.4Q22.72 27.56 22.48 30.81Q22.23 34.06 21.62 36.74Q21.99 38.86 22.14 42.17Q22.29 45.49 22.26 49.25Q22.23 53.02 22.08 56.57Q21.93 60.13 21.62 62.74Q20.35 62.68 19.22 61.74Q18.1 60.8 17.49 59.31Q16.89 57.82 17.13 56.24Q17.86 56.48 17.95 56.03Q18.04 55.57 17.98 54.9Q17.98 54.6 17.98 54.48Q17.92 53.81 18.04 53.26Q18.16 52.72 18.83 52.66Q18.83 52.17 18.43 52.17Q18.04 52.17 18.04 51.74Q18.28 48.89 18.31 45.15Q18.34 41.41 18.46 36.86Q18.59 33.21 18.4 29.2Q18.22 25.19 17.98 21.42Q17.92 20.33 17.86 19.3Q17.8 18.26 17.74 17.23Q17.68 15.53 17.22 14.38Q16.76 13.22 16.19 12.25Q15.61 11.28 15.12 10.12Q16.34 9.15 17.4 9.27Q18.46 9.39 19.41 10.09Q20.35 10.79 21.26 11.58Q21.69 11.94 22.14 12.34Q22.6 12.73 23.02 12.98Q23.33 14.31 23.17 15.74Q23.02 17.17 22.78 18.57Q22.54 19.9 22.38 21.27Q22.23 22.64 22.41 23.98Q24.24 24.34 26.09 25.37Q27.94 26.41 29.01 28.32Q30.07 30.23 29.4 33.21ZM51.76 45.06Q48.06 45.06 44.23 45.36Q40.4 45.67 37.36 46.15Q37.36 46.34 37.36 46.55Q37.36 46.76 37.36 47.0Q37.36 49.56 37.42 52.2Q37.48 54.84 37.97 56.67Q38.82 56.54 39.91 56.51Q41.01 56.48 42.16 56.48Q44.23 56.42 46.32 56.33Q48.42 56.24 50.12 55.75Q51.22 53.45 51.31 50.74Q51.4 48.04 51.76 45.06ZM49.51 26.28Q48.36 26.04 46.87 26.16Q45.38 26.28 44.05 26.47Q43.74 26.53 43.44 26.56Q43.13 26.59 42.83 26.65Q41.92 28.72 40.92 30.72Q39.91 32.73 39.18 35.03Q40.34 34.85 41.95 34.79Q43.56 34.73 45.32 34.67Q47.08 34.61 48.54 34.49Q48.6 33.94 48.72 33.45Q48.85 32.97 48.91 32.48Q49.21 31.09 49.42 29.63Q49.64 28.17 49.51 26.28ZM13.42 25.37Q15.24 26.65 15.64 28.56Q16.03 30.48 15.55 32.6Q15.06 34.73 14.18 36.74Q13.3 38.74 12.57 40.2Q11.48 40.08 10.78 39.11Q10.08 38.13 9.56 36.8Q9.05 35.46 8.5 34.43Q10.44 32.54 11.45 29.99Q12.45 27.44 13.42 25.37Z"
+          />
+          <path fill="#b68af5" d="M43 70 70 62 65 68 45 73Z" />
+          <path fill="#9470d7" d="m70 59 4-2-2 5Z" /></svg
+      ></a>
+      <p>
+        © <span id="year">2026</span> Gustavo Mendonça<br /><small
+          >Construído com curiosidade. E um pouco de energia roxa.</small
+        >
+      </p>
+      <a href="#inicio">De volta ao topo ↑</a>
+    </footer>
+    <dialog class="project-detail-dialog" id="project-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-top">
+        <span class="eyebrow">POR DENTRO DO PROJETO</span
+        ><button id="close-dialog" aria-label="Fechar detalhes">×</button>
       </div>
-      <a class="all-projects" href="https://github.com/gohenj?tab=repositories" target="_blank" rel="noopener noreferrer">Outras ideias em construção <span>Ver todos no GitHub ↗</span></a>
-    </section>
-    <section class="section about" id="sobre" aria-labelledby="about-title"><div class="about-title"><p class="eyebrow">02 / POR TRÁS DO CÓDIGO</p><h2 id="about-title">Curiosidade<br />é minha<br /><em>energia.</em></h2><div class="signature">Gustavo Mendonça <span>↗</span></div></div><div class="about-copy"><span class="about-kicker">PRAZER, GUSTAVO.</span><p class="about-lead">Gosto de entender como as coisas funcionam.<br />E de descobrir como fazê-las funcionar melhor.</p><p>Sou estudante de programação e desenvolvo projetos pessoais e acadêmicos. Meu foco está no frontend: criar interfaces que sejam agradáveis de usar e façam sentido para quem está do outro lado da tela.</p><p>Também exploro o que acontece por trás delas, construindo APIs com Node.js e Java e conectando aplicações a bancos de dados. Aprendo colocando a mão no código, testando e melhorando a cada projeto.</p><div class="about-principles"><span><b>01</b> Atenção ao detalhe</span><span><b>02</b> Aprender construindo</span><span><b>03</b> Evoluir com feedback</span></div><p class="anime-note"><span>✧</span> Inspirado pela energia de Jujutsu Kaisen.<br />Movido pela vontade de construir algo meu.</p></div></section>
-    <section class="section tech" id="tecnologias" aria-labelledby="tech-title"><div class="section-intro"><p class="eyebrow">03 / TECNOLOGIAS NA PRÁTICA</p><div class="section-title-row"><h2 id="tech-title">Meu kit<br />de <em>construção.</em></h2><p>React e TypeScript no foco.<br />Outras ferramentas que já usei pelo caminho.</p></div></div>
-      <div class="stack-filters" role="group" aria-label="Filtrar tecnologias por área"><button class="active" data-tech-filter="frontend" aria-pressed="true">Frontend <span>10</span></button><button data-tech-filter="backend" aria-pressed="false">Backend <span>07</span></button><button data-tech-filter="data" aria-pressed="false">Dados <span>05</span></button><button data-tech-filter="tools" aria-pressed="false">Ferramentas <span>06</span></button></div>
-      <p class="sr-only" id="tech-status" role="status">10 tecnologias de Frontend.</p><div class="stack-grid"><article class="stack-card" data-tech-area="frontend" style="--tech-accent:#61dafb"><div class="stack-symbol react"><img src="assets/tech/react.svg" alt="" width="36" height="36" loading="lazy" /></div><h3>React</h3><p>Biblioteca de interfaces</p><div class="stack-evidence"><a href="#projeto-arena">Arena Pulse · Niver do Jão ↗</a></div></article><article class="stack-card" data-tech-area="frontend" style="--tech-accent:#3178c6"><div class="stack-symbol typescript"><img src="assets/tech/typescript.svg" alt="" width="36" height="36" loading="lazy" /></div><h3>TypeScript</h3><p>Linguagem</p><div class="stack-evidence"><a href="#projeto-arena">Arena Pulse ↗</a></div></article><article class="stack-card" data-tech-area="frontend" style="--tech-accent:#38bdf8"><div class="stack-symbol tailwind"><img src="assets/tech/tailwind.svg" alt="" width="36" height="36" loading="lazy" /></div><h3>Tailwind CSS</h3><p>Estilos utilitários</p><div class="stack-evidence"><a href="#projeto-niver">Arena Pulse · Niver do Jão ↗</a></div></article><article class="stack-card" data-tech-area="frontend" style="--tech-accent:#f7df1e"><div class="stack-symbol javascript"><img src="assets/tech/javascript.svg" alt="" width="36" height="36" loading="lazy" /></div><h3>JavaScript</h3><p>Linguagem</p><div class="stack-evidence"><a href="#projeto-niver">Niver do Jão ↗</a></div></article><article class="stack-card" data-tech-area="frontend" style="--tech-accent:#e34f26"><div class="stack-symbol html"><img src="assets/tech/html.svg" alt="" width="36" height="36" loading="lazy" /></div><h3>HTML</h3><p>Estrutura da web</p><div class="stack-evidence"><a href="#projetos">Projetos web ↗</a></div></article><article class="stack-card" data-tech-area="frontend" style="--tech-accent:#1572b6"><div class="stack-symbol css"><img src="assets/tech/css.svg" alt="" width="36" height="36" loading="lazy" /></div><h3>CSS</h3><p>Estilos e responsividade</p><div class="stack-evidence"><a href="#projetos">Projetos web ↗</a></div></article><article class="stack-card" data-tech-area="frontend" style="--tech-accent:#dd0031"><div class="stack-symbol angular"><img src="assets/tech/angular.svg" alt="" width="36" height="36" loading="lazy" /></div><h3>Angular</h3><p>Framework</p><div class="stack-evidence"><span>Projeto acadêmico</span></div></article><article class="stack-card" data-tech-area="frontend" style="--tech-accent:#0081cb"><div class="stack-symbol mui"><img src="assets/tech/mui.svg" alt="" width="36" height="36" loading="lazy" /></div><h3>Material UI</h3><p>Componentes de interface</p><div class="stack-evidence"><span>Projetos anteriores</span></div></article><article class="stack-card" data-tech-area="frontend" style="--tech-accent:#f46c7d"><div class="stack-symbol router"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8h7a5 5 0 0 1 5 5v6M8 8l4-4M8 8l4 4M24 24h-7a5 5 0 0 1-5-5v-6M24 24l-4-4M24 24l-4 4"/></svg></div><h3>React Router</h3><p>Navegação</p><div class="stack-evidence"><span>Projetos anteriores</span></div></article><article class="stack-card" data-tech-area="frontend" style="--tech-accent:#a58ae9"><div class="stack-symbol axios"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 3-9 13h6l-3 13 10-16h-6l2-10Z"/></svg></div><h3>Axios</h3><p>Cliente HTTP</p><div class="stack-evidence"><span>Projetos anteriores</span></div></article><article class="stack-card" data-tech-area="backend" style="--tech-accent:#83cd29" hidden><div class="stack-symbol node"><img src="assets/tech/node.svg" alt="" width="36" height="36" loading="lazy" /></div><h3>Node.js</h3><p>Ambiente JavaScript</p><div class="stack-evidence"><span>Projetos anteriores</span></div></article><article class="stack-card" data-tech-area="backend" style="--tech-accent:#c2c5d0" hidden><div class="stack-symbol express"><img src="assets/tech/express.svg" alt="" width="36" height="36" loading="lazy" /></div><h3>Express</h3><p>Framework de servidor</p><div class="stack-evidence"><span>Projetos anteriores</span></div></article><article class="stack-card" data-tech-area="backend" style="--tech-accent:#ee7650" hidden><div class="stack-symbol java"><img src="assets/tech/java.svg" alt="" width="36" height="36" loading="lazy" /></div><h3>Java</h3><p>Linguagem</p><div class="stack-evidence"><span>Projetos acadêmicos</span></div></article><article class="stack-card" data-tech-area="backend" style="--tech-accent:#6db33f" hidden><div class="stack-symbol spring"><img src="assets/tech/spring.svg" alt="" width="36" height="36" loading="lazy" /></div><h3>Spring Boot</h3><p>Framework de servidor</p><div class="stack-evidence"><span>Projetos acadêmicos</span></div></article><article class="stack-card" data-tech-area="backend" style="--tech-accent:#8cbbfa" hidden><div class="stack-symbol api"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 8-7 8 7 8M22 8l7 8-7 8M19 4l-6 24"/></svg></div><h3>APIs REST</h3><p>Comunicação HTTP</p><div class="stack-evidence"><span>Projetos anteriores</span></div></article><article class="stack-card" data-tech-area="backend" style="--tech-accent:#d5a5f5" hidden><div class="stack-symbol jwt"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3v26M3 16h26M7 7l18 18M25 7 7 25"/></svg></div><h3>JWT</h3><p>Autenticação</p><div class="stack-evidence"><span>Projetos anteriores</span></div></article><article class="stack-card" data-tech-area="backend" style="--tech-accent:#d6b075" hidden><div class="stack-symbol lock"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="13" width="18" height="15" rx="3"/><path d="M11 13V9a5 5 0 0 1 10 0v4M16 19v4"/></svg></div><h3>bcrypt</h3><p>Hash de senhas</p><div class="stack-evidence"><span>Projetos anteriores</span></div></article><article class="stack-card" data-tech-area="data" style="--tech-accent:#4db33d" hidden><div class="stack-symbol mongodb"><img src="assets/tech/mongodb.svg" alt="" width="36" height="36" loading="lazy" /></div><h3>MongoDB</h3><p>Banco de documentos</p><div class="stack-evidence"><span>Projetos anteriores</span></div></article><article class="stack-card" data-tech-area="data" style="--tech-accent:#4db33d" hidden><div class="stack-symbol mongodb"><img src="assets/tech/mongodb.svg" alt="" width="36" height="36" loading="lazy" /></div><h3>MongoDB Atlas</h3><p>Banco hospedado</p><div class="stack-evidence"><span>Projetos anteriores</span></div></article><article class="stack-card" data-tech-area="data" style="--tech-accent:#8baad2" hidden><div class="stack-symbol database"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="16" cy="7" rx="11" ry="4"/><path d="M5 7v18c0 5 22 5 22 0V7M5 16c0 5 22 5 22 0"/></svg></div><h3>H2</h3><p>Banco relacional</p><div class="stack-evidence"><span>Projetos acadêmicos</span></div></article><article class="stack-card" data-tech-area="data" style="--tech-accent:#d27c75" hidden><div class="stack-symbol database"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="16" cy="7" rx="11" ry="4"/><path d="M5 7v18c0 5 22 5 22 0V7M5 16c0 5 22 5 22 0"/></svg></div><h3>Mongoose</h3><p>Modelagem de documentos</p><div class="stack-evidence"><span>Projetos anteriores</span></div></article><article class="stack-card" data-tech-area="data" style="--tech-accent:#6db33f" hidden><div class="stack-symbol spring"><img src="assets/tech/spring.svg" alt="" width="36" height="36" loading="lazy" /></div><h3>Spring Data JPA</h3><p>Persistência de dados</p><div class="stack-evidence"><span>Projetos acadêmicos</span></div></article><article class="stack-card" data-tech-area="tools" style="--tech-accent:#f05032" hidden><div class="stack-symbol git"><img src="assets/tech/git.svg" alt="" width="36" height="36" loading="lazy" /></div><h3>Git</h3><p>Controle de versão</p><div class="stack-evidence"><span>Fluxo de desenvolvimento</span></div></article><article class="stack-card" data-tech-area="tools" style="--tech-accent:#d0d4df" hidden><div class="stack-symbol github"><img src="assets/tech/github.svg" alt="" width="36" height="36" loading="lazy" /></div><h3>GitHub</h3><p>Repositórios</p><div class="stack-evidence"><a href="https://github.com/gohenj" target="_blank" rel="noopener noreferrer">Projetos públicos ↗</a></div></article><article class="stack-card" data-tech-area="tools" style="--tech-accent:#bd7cff" hidden><div class="stack-symbol vite"><img src="assets/tech/vite.svg" alt="" width="36" height="36" loading="lazy" /></div><h3>Vite</h3><p>Ferramenta de desenvolvimento</p><div class="stack-evidence"><a href="#projeto-niver">Arena Pulse · Niver do Jão ↗</a></div></article><article class="stack-card" data-tech-area="tools" style="--tech-accent:#cb3837" hidden><div class="stack-symbol npm"><img src="assets/tech/npm.svg" alt="" width="36" height="36" loading="lazy" /></div><h3>npm</h3><p>Dependências</p><div class="stack-evidence"><span>Projetos JavaScript</span></div></article><article class="stack-card" data-tech-area="tools" style="--tech-accent:#d46d91" hidden><div class="stack-symbol maven"><img src="assets/tech/maven.svg" alt="" width="36" height="36" loading="lazy" /></div><h3>Maven</h3><p>Build e dependências</p><div class="stack-evidence"><span>Projetos Java</span></div></article><article class="stack-card" data-tech-area="tools" style="--tech-accent:#ee7650" hidden><div class="stack-symbol java"><img src="assets/tech/java.svg" alt="" width="36" height="36" loading="lazy" /></div><h3>JavaFX</h3><p>Interface desktop</p><div class="stack-evidence"><span>Projetos acadêmicos</span></div></article></div><p class="stack-note">Tecnologias utilizadas em projetos pessoais e acadêmicos. Os links indicam exemplos; as demais fazem parte de experiências anteriores.</p>
-    </section>
-    <section class="contact section" id="contato" aria-labelledby="contact-title"><p class="eyebrow">04 / O PRÓXIMO CAPÍTULO</p><div class="contact-grid"><h2 id="contact-title">Vamos criar<br />algo <em>fora<br />do comum.</em><span class="contact-star" aria-hidden="true">✧</span></h2><div class="contact-copy"><p>Uma oportunidade, uma ideia<br />ou uma boa conversa sobre código.</p><p class="contact-sub">Meu próximo desafio pode começar com um oi.</p><a class="contact-link" href="https://www.linkedin.com/in/gustavo-mendon%C3%A7a-795395209/" target="_blank" rel="noopener noreferrer"><span><small>VAMOS CONVERSAR</small>LinkedIn</span><span>↗</span></a><a class="contact-link" href="https://github.com/gohenj" target="_blank" rel="noopener noreferrer"><span><small>ACOMPANHE MEU CÓDIGO</small>github.com/gohenj</span><span>↗</span></a></div></div></section>
-  </main>
-  <footer class="footer"><a class="logo kanji-logo" href="#inicio" aria-label="Voltar ao início"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" aria-hidden="true"><path fill="currentColor" d="M67.5 38.07Q66.77 39.11 65.56 39.01Q64.34 38.92 62.94 38.62Q62.4 38.5 61.79 38.38Q61.18 38.25 60.57 38.19Q58.69 38.01 56.53 38.04Q54.38 38.07 52.43 38.25Q50.73 38.38 48.97 38.44Q47.21 38.5 45.44 38.5Q41.25 38.56 37.33 38.89Q33.41 39.23 30.5 40.99Q28.0 41.23 26.27 39.87Q24.54 38.5 23.27 36.98Q23.57 36.31 23.93 36.31Q24.3 36.31 24.54 35.89Q26.12 36.37 27.82 36.22Q29.52 36.07 31.23 35.82Q32.2 35.64 33.14 35.52Q34.08 35.4 34.99 35.4Q35.17 35.22 35.3 34.97Q35.42 34.73 35.54 34.49Q35.78 33.94 36.15 33.52Q36.51 33.09 37.3 33.15Q37.24 32.73 37.03 32.48Q36.82 32.24 36.51 32.0Q37.18 30.6 37.45 29.44Q37.73 28.29 38.27 26.77Q36.88 27.01 36.18 27.35Q35.48 27.68 34.45 28.29Q32.5 27.62 31.01 26.77Q29.52 25.92 29.34 23.85Q30.86 24.04 32.35 24.01Q33.84 23.98 35.17 23.85Q36.21 23.79 37.21 23.76Q38.21 23.73 39.12 23.79Q39.25 23.31 39.43 22.76Q39.61 22.21 39.85 21.61Q40.28 20.33 40.64 19.08Q41.01 17.84 40.7 16.99Q40.46 16.32 40.1 16.26Q39.73 16.2 39.31 16.32Q39.0 16.38 38.7 16.38Q38.39 16.38 38.03 16.26Q37.73 16.2 37.61 16.35Q37.48 16.5 37.36 16.68Q37.24 17.17 36.94 17.17Q34.75 16.87 33.26 15.86Q31.77 14.86 30.56 13.59Q30.92 12.92 31.68 12.8Q32.44 12.67 33.23 12.98Q33.9 12.43 34.84 12.37Q35.78 12.31 36.82 12.37Q37.3 12.37 37.76 12.37Q38.21 12.37 38.7 12.37Q39.43 12.31 40.25 12.22Q41.07 12.13 41.86 12.07Q43.44 11.88 44.93 11.76Q46.42 11.64 47.45 11.88Q49.58 11.09 52.07 10.88Q54.56 10.67 56.75 11.28Q58.93 11.88 60.15 13.71Q58.45 14.98 55.74 15.29Q53.04 15.59 50.24 15.65Q48.6 15.71 47.08 15.8Q45.56 15.89 44.29 16.14Q44.41 16.32 44.53 16.53Q44.65 16.75 44.77 16.93Q45.14 17.54 45.44 18.2Q45.75 18.87 45.69 19.84Q45.02 20.33 44.59 21.15Q44.17 21.97 43.92 23.0Q45.5 23.0 47.81 22.76Q50.12 22.52 51.88 22.21Q52.73 22.76 53.98 23.34Q55.23 23.92 56.26 24.83Q57.29 25.74 57.41 27.38Q56.87 27.86 56.23 27.9Q55.59 27.93 54.92 28.47Q54.74 29.87 54.35 31.48Q53.95 33.09 53.77 33.94Q55.04 34.73 56.29 34.61Q57.54 34.49 58.63 34.18Q59.3 34.0 59.9 33.88Q60.51 33.76 61.06 33.82Q61.91 33.88 62.85 34.46Q63.79 35.03 64.58 35.52Q65.31 35.95 66.32 36.46Q67.32 36.98 67.5 38.07ZM60.94 44.51Q60.51 45.06 59.9 45.27Q59.3 45.49 58.75 45.7Q58.2 45.91 57.78 46.52Q56.93 47.79 56.71 49.71Q56.5 51.62 56.29 53.54Q56.08 55.45 55.1 56.73Q55.1 57.15 55.32 57.43Q55.53 57.7 55.77 57.94Q56.02 58.25 56.17 58.49Q56.32 58.73 56.14 59.04Q53.71 59.34 50.91 59.49Q48.12 59.64 45.38 59.64Q42.65 59.64 40.34 59.64Q39.85 59.64 39.43 59.64Q39.0 59.64 38.58 59.64Q37.79 60.92 37.06 61.01Q36.33 61.1 35.6 60.55Q34.87 60.01 34.23 59.1Q33.59 58.18 32.99 57.46Q32.99 57.21 33.05 56.79Q33.23 54.84 33.32 53.38Q33.41 51.93 33.35 50.59Q33.29 49.25 32.93 47.61Q32.32 46.7 31.32 46.18Q30.31 45.67 29.83 44.63Q29.83 44.39 29.89 44.24Q29.95 44.09 30.07 44.03Q30.19 43.91 30.28 43.75Q30.37 43.6 30.31 43.24Q30.5 43.18 31.16 43.18Q31.83 43.18 32.62 43.12Q33.41 43.06 33.84 42.63Q35.17 42.45 36.75 42.39Q38.33 42.33 39.97 42.33Q43.26 42.33 46.48 42.05Q49.7 41.78 51.82 40.5Q54.68 41.05 56.96 41.81Q59.24 42.57 60.94 44.51ZM29.4 33.21Q27.76 33.88 26.27 32.85Q24.78 31.81 23.9 29.84Q23.02 27.86 23.27 25.8Q23.08 25.43 22.99 24.95Q22.9 24.46 22.41 24.4Q22.72 27.56 22.48 30.81Q22.23 34.06 21.62 36.74Q21.99 38.86 22.14 42.17Q22.29 45.49 22.26 49.25Q22.23 53.02 22.08 56.57Q21.93 60.13 21.62 62.74Q20.35 62.68 19.22 61.74Q18.1 60.8 17.49 59.31Q16.89 57.82 17.13 56.24Q17.86 56.48 17.95 56.03Q18.04 55.57 17.98 54.9Q17.98 54.6 17.98 54.48Q17.92 53.81 18.04 53.26Q18.16 52.72 18.83 52.66Q18.83 52.17 18.43 52.17Q18.04 52.17 18.04 51.74Q18.28 48.89 18.31 45.15Q18.34 41.41 18.46 36.86Q18.59 33.21 18.4 29.2Q18.22 25.19 17.98 21.42Q17.92 20.33 17.86 19.3Q17.8 18.26 17.74 17.23Q17.68 15.53 17.22 14.38Q16.76 13.22 16.19 12.25Q15.61 11.28 15.12 10.12Q16.34 9.15 17.4 9.27Q18.46 9.39 19.41 10.09Q20.35 10.79 21.26 11.58Q21.69 11.94 22.14 12.34Q22.6 12.73 23.02 12.98Q23.33 14.31 23.17 15.74Q23.02 17.17 22.78 18.57Q22.54 19.9 22.38 21.27Q22.23 22.64 22.41 23.98Q24.24 24.34 26.09 25.37Q27.94 26.41 29.01 28.32Q30.07 30.23 29.4 33.21ZM51.76 45.06Q48.06 45.06 44.23 45.36Q40.4 45.67 37.36 46.15Q37.36 46.34 37.36 46.55Q37.36 46.76 37.36 47.0Q37.36 49.56 37.42 52.2Q37.48 54.84 37.97 56.67Q38.82 56.54 39.91 56.51Q41.01 56.48 42.16 56.48Q44.23 56.42 46.32 56.33Q48.42 56.24 50.12 55.75Q51.22 53.45 51.31 50.74Q51.4 48.04 51.76 45.06ZM49.51 26.28Q48.36 26.04 46.87 26.16Q45.38 26.28 44.05 26.47Q43.74 26.53 43.44 26.56Q43.13 26.59 42.83 26.65Q41.92 28.72 40.92 30.72Q39.91 32.73 39.18 35.03Q40.34 34.85 41.95 34.79Q43.56 34.73 45.32 34.67Q47.08 34.61 48.54 34.49Q48.6 33.94 48.72 33.45Q48.85 32.97 48.91 32.48Q49.21 31.09 49.42 29.63Q49.64 28.17 49.51 26.28ZM13.42 25.37Q15.24 26.65 15.64 28.56Q16.03 30.48 15.55 32.6Q15.06 34.73 14.18 36.74Q13.3 38.74 12.57 40.2Q11.48 40.08 10.78 39.11Q10.08 38.13 9.56 36.8Q9.05 35.46 8.5 34.43Q10.44 32.54 11.45 29.99Q12.45 27.44 13.42 25.37Z"/><path fill="#b68af5" d="M43 70 70 62 65 68 45 73Z"/><path fill="#9470d7" d="m70 59 4-2-2 5Z"/></svg></a><p>© <span id="year">2026</span> Gustavo Mendonça<br /><small>Construído com curiosidade. E um pouco de energia roxa.</small></p><a href="#inicio">De volta ao topo ↑</a></footer>
-  <dialog id="project-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span class="eyebrow">POR DENTRO DO PROJETO</span><button id="close-dialog" aria-label="Fechar detalhes">×</button></div><h2 id="dialog-title"></h2><div id="dialog-body"></div></dialog>
-</body>
+      <h2 id="dialog-title"></h2>
+      <div id="dialog-body"></div>
+    </dialog>
+  </body>
 </html>
 

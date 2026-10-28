@@ -14,32 +14,8 @@ filters.forEach(button => button.addEventListener('click', () => {
   document.querySelector('#project-status').textContent = `${count} ${count === 1 ? 'projeto exibido' : 'projetos exibidos'}.`;
 }));
 
-const details = {
-  arena: {
-    title: 'Arena Pulse',
-    html: '<p>Primeiro sprint de um dashboard de esports, construído com React, TypeScript, Vite e Tailwind CSS.</p><ul><li>Componentes reutilizáveis para navegação, estatísticas e partidas.</li><li>Busca e filtro por jogo, com estado vazio.</li><li>Favoritos persistidos no localStorage.</li><li>Layout responsivo e navegação por teclado.</li></ul><p>As partidas e os horários são demonstrativos. A integração com API e as atualizações em tempo real são próximos passos.</p>'
-  },
-  barber: {
-    title: 'Barber Pro',
-    html: '<p>Aplicação publicada para apresentar uma barbearia e organizar a escolha de serviços e horários.</p><ul><li>Seleção de serviço, profissional e data.</li><li>Entrada e criação de conta disponíveis na interface.</li><li>Catálogo de cortes e vitrine com disponibilidade de produtos.</li></ul><p>A experiência reúne a apresentação da barbearia e o início do agendamento em uma única aplicação.</p>'
-  },
-  birthday: {
-    title: 'Niver do Jão',
-    html: '<p>Convite digital com identidade visual inspirada no futebol brasileiro.</p><ul><li>Informações da comemoração e formulário de confirmação de presença.</li><li>Campo de nome e escolha entre comparecer ou não.</li><li>React, JavaScript, Tailwind CSS e Vite, conferidos no repositório público.</li></ul><p>O objetivo é concentrar o convite e a resposta do convidado em uma única experiência.</p>'
-  }
-};
+// As fichas são renderizadas por project-details.js a partir de project-data.js.
 const dialog = document.querySelector('#project-dialog');
-document.querySelectorAll('[data-detail]').forEach(button => button.addEventListener('click', () => {
-  const detail = details[button.dataset.detail];
-  document.querySelector('#dialog-title').textContent = detail.title;
-  document.querySelector('#dialog-body').innerHTML = detail.html;
-  dialog.showModal();
-}));
-document.querySelector('#close-dialog').addEventListener('click', () => dialog.close());
-dialog.addEventListener('click', event => {
-  const box = dialog.getBoundingClientRect();
-  if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close();
-});
 document.querySelector('#year').textContent = new Date().getFullYear();
 
 // Motion preferences apply to autoplay, decorative loops and entrance effects.
